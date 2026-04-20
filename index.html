@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Seamless Brothers | Elevated Gutter Solutions | Midlands, SC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C89539;--gold-light:#D4A94E;--gold-dark:#A67A2E;--black:#0A0A0E;--black-card:#111116;--black-surface:#18181E;--white:#F3EFE8;--white-90:rgba(243,239,232,.9);--white-70:rgba(243,239,232,.7);--white-50:rgba(243,239,232,.5);--white-40:rgba(243,239,232,.4);--white-20:rgba(243,239,232,.2);--white-15:rgba(243,239,232,.15);--white-08:rgba(243,239,232,.08);--white-04:rgba(243,239,232,.04);--font:'DM Sans',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif;--r:12px;--rs:8px;--rl:20px;--rf:100px}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--black);color:var(--white);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* NAV */.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;background:rgba(10,10,14,0);transition:all .5s}.navbar.scrolled{padding:12px 0;background:rgba(10,10,14,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--white-08)}.navbar .container{display:flex;justify-content:space-between;align-items:center}.nav-brand{font-size:18px;font-weight:700;text-decoration:none;color:var(--white);letter-spacing:.5px}.nav-brand span{color:var(--gold)}.nav-links{display:flex;gap:32px;align-items:center}.nav-links a{color:var(--white-70);font-size:13px;text-decoration:none;font-weight:500;transition:color .3s;letter-spacing:1px;text-transform:uppercase}.nav-links a:hover{color:var(--white)}.nav-cta{background:var(--gold);color:var(--black);padding:10px 28px;font-size:13px;font-weight:600;text-decoration:none;border-radius:var(--rf);transition:all .3s;border:1.5px solid var(--gold);letter-spacing:.5px;text-transform:uppercase}.nav-cta:hover{background:transparent;color:var(--gold)}.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:.3s;border-radius:2px}
+
+/* HERO */.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.hero-video-wrap{position:absolute;inset:0;z-index:0}.hero-video-wrap video{width:100%;height:100%;object-fit:cover}.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,14,.7) 0%,rgba(10,10,14,.35) 40%,rgba(10,10,14,.85) 100%)}.hero-fallback{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 20% 50%,rgba(200,149,57,.08) 0%,transparent 55%),radial-gradient(ellipse at 80% 30%,rgba(200,149,57,.05) 0%,transparent 50%),linear-gradient(160deg,#0A0A0E 0%,#12121A 50%,#0A0A0E 100%)}.hero-noise{position:absolute;inset:0;z-index:2;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.hero-content{position:relative;z-index:3;text-align:center;padding:140px 24px 100px;max-width:820px;margin:0 auto}.hero-tagline{font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-weight:500;animation:fadeUp .8s ease .2s both}.hero h1{font-family:var(--serif);font-size:clamp(42px,7.5vw,80px);font-weight:600;line-height:1.05;letter-spacing:-1px;margin-bottom:24px;animation:fadeUp .8s ease .4s both}.hero h1 em{font-style:italic;color:var(--gold)}.hero-sub{font-size:17px;color:var(--white-70);max-width:500px;margin:0 auto 48px;line-height:1.7;animation:fadeUp .8s ease .6s both}.hero-cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s ease .8s both}.btn-p{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--black);padding:16px 36px;font-size:13px;font-weight:700;text-decoration:none;text-transform:uppercase;border-radius:var(--rf);transition:all .4s;letter-spacing:1px;border:1.5px solid var(--gold);font-family:var(--font);cursor:pointer}.btn-p:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 16px 48px rgba(200,149,57,.3)}.btn-s{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);padding:16px 36px;font-size:13px;font-weight:600;text-decoration:none;text-transform:uppercase;border-radius:var(--rf);transition:all .4s;letter-spacing:1px;border:1.5px solid var(--white-20);font-family:var(--font)}.btn-s:hover{border-color:var(--white-50);background:var(--white-08)}.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;animation:float 3s ease-in-out infinite}.hero-scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,var(--gold),transparent);margin:0 auto}
+
+/* SHARED */.sl{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:600}.st{font-family:var(--serif);font-size:clamp(32px,4.5vw,52px);font-weight:600;line-height:1.1;letter-spacing:-.5px;margin-bottom:18px}.st em{font-style:italic;color:var(--gold)}.sd{font-size:16px;color:var(--white-70);max-width:520px;line-height:1.7}.gl{width:100%;height:1px;background:linear-gradient(to right,transparent,rgba(200,149,57,.25),transparent)}
+
+/* SERVICES */.services{padding:140px 0 120px;position:relative}.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:60px}.sc{background:var(--black-card);padding:40px 28px;border-radius:var(--r);position:relative;overflow:hidden;transition:all .45s;border:1px solid var(--white-08);cursor:default}.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0;transition:opacity .4s}.sc:hover{background:var(--black-surface);transform:translateY(-6px);border-color:rgba(200,149,57,.15);box-shadow:0 24px 64px rgba(0,0,0,.5)}.sc:hover::before{opacity:1}.si{width:48px;height:48px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;background:rgba(200,149,57,.08);border-radius:var(--rs);color:var(--gold)}.sc h3{font-size:18px;font-weight:600;margin-bottom:12px}.sc p{font-size:14px;color:var(--white-70);line-height:1.65}
+
+/* PROCESS */.process{padding:120px 0;position:relative;overflow:hidden}.process-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(200,149,57,.04),transparent 60%)}.pt{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;position:relative;z-index:1}.pt::before{content:'';position:absolute;top:40px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(to right,var(--gold-dark),var(--gold),var(--gold-dark));opacity:.3}.ps{text-align:center;padding:0 20px;position:relative}.sm{width:80px;height:80px;border-radius:50%;margin:0 auto 28px;display:flex;align-items:center;justify-content:center;background:var(--black-card);border:2px solid rgba(200,149,57,.3);font-family:var(--serif);font-size:28px;font-weight:600;color:var(--gold);position:relative;z-index:2;transition:all .4s}.ps:hover .sm{border-color:var(--gold);box-shadow:0 0 40px rgba(200,149,57,.2);transform:scale(1.08)}.ps h3{font-size:16px;font-weight:600;margin-bottom:10px;letter-spacing:.3px}.ps p{font-size:14px;color:var(--white-70);line-height:1.6}
+
+/* WHY US */.why{padding:120px 0;position:relative}.wg{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}.ws{display:grid;grid-template-columns:1fr 1fr;gap:16px}.wc{padding:32px;border-radius:var(--r);background:var(--black-card);border:1px solid var(--white-08);transition:all .4s}.wc:hover{border-color:rgba(200,149,57,.2);transform:translateY(-2px)}.wn{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:6px}.wl{font-size:13px;color:var(--white-50);line-height:1.4}.wy-desc{margin-bottom:36px}.wy-list{list-style:none;display:flex;flex-direction:column;gap:20px}.wy-list li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--white-70);line-height:1.6}.wd{flex-shrink:0;width:8px;height:8px;margin-top:7px;background:var(--gold);border-radius:50%}
+
+/* TEAM */.team{padding:120px 0;position:relative;overflow:hidden}.team-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--black) 0%,rgba(200,149,57,.02) 50%,var(--black) 100%)}.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;position:relative;z-index:1}.tc{background:var(--black-card);border-radius:var(--rl);overflow:hidden;border:1px solid var(--white-08);transition:all .4s}.tc:hover{border-color:rgba(200,149,57,.2);transform:translateY(-4px)}.tp{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,var(--black-surface) 0%,var(--black-card) 100%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:24px;color:var(--white-20);font-size:13px;letter-spacing:2px;text-transform:uppercase}.ti{padding:24px}.tn{font-size:18px;font-weight:600;margin-bottom:4px}.tr{font-size:13px;color:var(--gold);font-weight:500;letter-spacing:.5px}
+
+/* TESTIMONIALS */.test{padding:120px 0;position:relative}.testg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}.testc{background:var(--black-card);padding:36px;border-radius:var(--r);border:1px solid var(--white-08);transition:all .4s}.testc:hover{border-color:rgba(200,149,57,.15)}.tq{font-size:40px;color:var(--gold);opacity:.3;font-family:var(--serif);line-height:1;margin-bottom:16px}.tt{font-size:15px;color:var(--white-70);line-height:1.7;margin-bottom:24px;font-style:italic}.ta{font-size:14px;font-weight:600}.tloc{font-size:12px;color:var(--white-40);margin-top:2px}
+
+/* AREA */.area{padding:120px 0;text-align:center;position:relative;overflow:hidden}.area-map{max-width:700px;margin:48px auto 0}.area-pin{fill:var(--gold);filter:drop-shadow(0 0 6px rgba(200,149,57,.5));animation:pinPulse 2s ease-in-out infinite}.area-pin:nth-child(2n){animation-delay:.4s}.area-pin:nth-child(3n){animation-delay:.8s}.area-cities{color:var(--white-70);max-width:500px;margin:28px auto 0;font-size:15px;line-height:1.7}.area-badge{display:inline-block;padding:12px 32px;margin-top:28px;border:1px solid rgba(200,149,57,.3);border-radius:var(--rf);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;transition:all .3s}.area-badge:hover{background:rgba(200,149,57,.08);border-color:var(--gold)}
+
+/* CTA */.cta{padding:160px 0;text-align:center;position:relative;overflow:hidden}.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(200,149,57,.06),transparent 60%);pointer-events:none}.cta h2{font-family:var(--serif);font-size:clamp(36px,5vw,60px);font-weight:600;margin-bottom:18px;position:relative;z-index:1}.cta h2 em{font-style:italic;color:var(--gold)}.cta>div>p{font-size:16px;color:var(--white-70);max-width:460px;margin:0 auto 48px;line-height:1.7;position:relative;z-index:1}.cf{max-width:560px;margin:48px auto 0;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:16px}.cf .full{grid-column:1/-1}.cf input,.cf textarea,.cf select{width:100%;padding:16px 20px;background:var(--black-card);border:1px solid var(--white-08);border-radius:var(--rs);color:var(--white);font-family:var(--font);font-size:14px;transition:border-color .3s;outline:none}.cf input::placeholder,.cf textarea::placeholder{color:var(--white-40)}.cf input:focus,.cf textarea:focus,.cf select:focus{border-color:rgba(200,149,57,.4)}.cf textarea{resize:vertical;min-height:120px}.cf select{cursor:pointer;-webkit-appearance:none}.cf select option{background:var(--black-card);color:var(--white)}
+
+/* FOOTER */footer{padding:56px 0 40px;border-top:1px solid var(--white-08)}.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}.fb{font-size:18px;font-weight:700;margin-bottom:12px}.fb span{color:var(--gold)}.ft{font-size:13px;color:var(--white-40);margin-bottom:16px}.fc h4{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:600}.fc a{display:block;color:var(--white-50);font-size:14px;text-decoration:none;margin-bottom:10px;transition:color .3s}.fc a:hover{color:var(--white)}.fbot{margin-top:48px;padding-top:24px;border-top:1px solid var(--white-08);display:flex;justify-content:space-between;align-items:center}.fcopy{font-size:12px;color:var(--white-40)}.fsoc{display:flex;gap:16px}.fsoc a{color:var(--white-40);transition:color .3s}.fsoc a:hover{color:var(--gold)}
+
+/* ANIM */@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-8px)}}@keyframes pinPulse{0%,100%{opacity:.7}50%{opacity:1}}.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.35s}
+
+/* RESPONSIVE */@media(max-width:1024px){.sg{grid-template-columns:repeat(2,1fr)}.pt{grid-template-columns:repeat(2,1fr);gap:32px}.pt::before{display:none}.wg{gap:48px}.testg{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr;gap:32px}}@media(max-width:768px){.container{padding:0 20px}.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,14,.97);backdrop-filter:blur(24px);flex-direction:column;justify-content:center;align-items:center;gap:28px;z-index:200}.nav-links.open{display:flex}.nav-links a{font-size:16px}.nav-toggle{display:block;z-index:300}.nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.nav-toggle.active span:nth-child(2){opacity:0}.nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}.hero{min-height:100svh}.hero-content{padding:100px 20px 60px}.hero-tagline{font-size:10px;letter-spacing:4px}.hero h1{font-size:36px}.hero-sub{font-size:15px}.hero-cta-group{flex-direction:column;align-items:center}.btn-p,.btn-s{width:100%;max-width:320px;justify-content:center}.services,.process,.why,.team,.test,.area,.cta{padding:80px 0}.sg{grid-template-columns:1fr}.pt{grid-template-columns:1fr 1fr;gap:24px}.wg{grid-template-columns:1fr}.ws{grid-template-columns:1fr 1fr}.tg{grid-template-columns:1fr;max-width:360px;margin-left:auto;margin-right:auto}.cf{grid-template-columns:1fr}.fg{grid-template-columns:1fr;gap:32px}.fbot{flex-direction:column;gap:16px;text-align:center}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar"><div class="container">
+<a href="#" class="nav-brand" style="display:flex;align-items:center"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px;vertical-align:middle"><g transform="rotate(90 16 16)"><path d="M6 8l8 8-8 8" stroke="#C89539" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8l8 8-8 8" stroke="#C89539" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/></g></svg>THE SEAMLESS <span>BROTHERS</span></a>
+<div class="nav-links" id="navLinks">
+<a href="#services">Services</a><a href="#process">Process</a><a href="#about">About</a><a href="#team">Team</a><a href="#area">Areas</a><a href="#contact" class="nav-cta">Get a Quote</a>
+</div>
+<button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-video-wrap">
+<video autoplay muted loop playsinline><!-- <source src="hero-video.mp4" type="video/mp4"> --></video>
+</div>
+<div class="hero-fallback"></div>
+<div class="hero-overlay"></div>
+<div class="hero-noise"></div>
+<div class="hero-content">
+<p class="hero-tagline">Elevated Gutter Solutions</p>
+<h1>Your Gutters.<br><em>Our Standard.</em></h1>
+<p class="hero-sub">Owner-operated. Precision-installed. Built to protect your home for decades. Serving the Midlands of South Carolina.</p>
+<div class="hero-cta-group">
+<a href="#contact" class="btn-p">Get Your Free Quote <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+<a href="tel:8034806654" class="btn-s"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(803) 480-6654</a>
+</div>
+</div>
+<div class="hero-scroll"><div class="hero-scroll-line"></div></div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services"><div class="container">
+<div class="gl"></div>
+<div style="margin-top:80px"><p class="sl reveal">What We Do</p><h2 class="st reveal">Premium Gutter <em>Solutions</em></h2><p class="sd reveal">Every install is measured, fabricated on site, and installed by the owners. No subcontractors. No shortcuts. No callbacks.</p></div>
+<div class="sg">
+<div class="sc reveal rd1"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Seamless Gutter Installation</h3><p>Custom-fabricated 6-inch K-style seamless gutters built on site with our own machines. Perfect fit. Zero seams. Zero leaks.</p></div>
+<div class="sc reveal rd2"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Gutter Guards</h3><p>Bulldog and Grizzly guard systems to keep leaves and debris out permanently. Stop cleaning. Start protecting.</p></div>
+<div class="sc reveal rd3"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><h3>Gutter Repair</h3><p>Sagging, leaking, or pulling away from the fascia? We diagnose the problem and fix it right the first time.</p></div>
+<div class="sc reveal rd1"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Gutter Cleaning</h3><p>Full cleanout, flush, and inspection. We clear the debris and check for damage before it becomes a bigger problem.</p></div>
+<div class="sc reveal rd2"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 118 2.83"/><path d="M22 12A10 10 0 0012 2v10z"/></svg></div><h3>Downspout Solutions</h3><p>Custom routing, extensions, and underground drainage to move water away from your foundation. Engineered for your property.</p></div>
+<div class="sc reveal rd3"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div><h3>Storm Damage &amp; Insurance</h3><p>Hail, wind, or tree damage? We inspect, document, and provide detailed estimates for your insurance claim. Free inspection on every visit.</p></div>
+</div>
+</div></section>
+
+<!-- PROCESS -->
+<section class="process" id="process"><div class="process-bg"></div><div class="container" style="position:relative;z-index:1">
+<div class="gl"></div>
+<div style="margin-top:80px;text-align:center"><p class="sl reveal">How It Works</p><h2 class="st reveal">The Seamless <em>Process</em></h2><p class="sd reveal" style="margin:18px auto 0">From first call to final walkthrough. Four steps. Zero surprises.</p></div>
+<div class="pt">
+<div class="ps reveal rd1"><div class="sm">01</div><h3>Contact</h3><p>Call, text, or submit a request. Tyler responds within the hour. No phone trees. No runaround. You talk to an owner.</p></div>
+<div class="ps reveal rd2"><div class="sm">02</div><h3>Quote</h3><p>We come to your property, measure every run, check the fascia, and give you a line-item quote on the spot. No ballparks. No hidden fees.</p></div>
+<div class="ps reveal rd3"><div class="sm">03</div><h3>Install</h3><p>Tyler, Colten, and Andrew show up with the seamless machine, fabricate your gutters on site to the exact measurements, and install everything in a single visit. Most homes are done in one day.</p></div>
+<div class="ps reveal rd4"><div class="sm">04</div><h3>Inspect</h3><p>We walk the entire job with you before we leave. Every seam, every slope, every downspout. If something isn't right, we fix it before we pack up. You don't pay until you're satisfied.</p></div>
+</div>
+</div></section>
+
+<!-- WHY US -->
+<section class="why" id="about"><div class="container">
+<div class="gl"></div>
+<div class="wg" style="margin-top:80px">
+<div class="ws reveal">
+<div class="wc"><div class="wn">200+</div><div class="wl">Installs completed</div></div>
+<div class="wc"><div class="wn">74+</div><div class="wl">Clients served</div></div>
+<div class="wc"><div class="wn">4</div><div class="wl">Total callbacks</div></div>
+<div class="wc"><div class="wn">100%</div><div class="wl">Owner-operated installs</div></div>
+</div>
+<div class="reveal">
+<p class="sl">Why Us</p>
+<h2 class="st">Not Just <em>Another</em><br>Gutter Company</h2>
+<p class="sd wy-desc">Most gutter companies send whoever is available. We're different.</p>
+<ul class="wy-list">
+<li><span class="wd"></span>The owners are on every single job. The guys who built this company.</li>
+<li><span class="wd"></span>Two seamless gutter machines. We fabricate on site for a perfect fit.</li>
+<li><span class="wd"></span>Near-zero callback rate across 200+ installs.</li>
+<li><span class="wd"></span>Three brothers who left comfortable careers to build something that matters.</li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<!-- TEAM -->
+<section class="team" id="team"><div class="team-bg"></div><div class="container" style="position:relative;z-index:1">
+<div style="text-align:center"><p class="sl reveal">The Brothers</p><h2 class="st reveal">Built by <em>Family</em></h2><p class="sd reveal" style="margin:18px auto 0">Three brothers. One mission. Every job is personal because our name is on it.</p></div>
+<div class="tg">
+<div class="tc reveal rd1"><div class="tp">Photo Coming</div><div class="ti"><div class="tn">Tyler List</div><div class="tr">Co-Owner / Operations</div></div></div>
+<div class="tc reveal rd2"><div class="tp">Photo Coming</div><div class="ti"><div class="tn">Colten List</div><div class="tr">Co-Owner / Field Lead</div></div></div>
+<div class="tc reveal rd3"><div class="tp">Photo Coming</div><div class="ti"><div class="tn">Andrew List</div><div class="tr">Co-Owner / Field Lead</div></div></div>
+</div>
+</div></section>
+
+<!-- TESTIMONIALS -->
+<section class="test"><div class="container">
+<div class="gl"></div>
+<div style="margin-top:80px;text-align:center"><p class="sl reveal">What They Say</p><h2 class="st reveal">Client <em>Stories</em></h2><p class="sd reveal" style="margin:18px auto 0">Real feedback from real homeowners and builders across the Midlands.</p></div>
+<div class="testg">
+<div class="testc reveal rd1"><div class="tq">&ldquo;</div><p class="tt">Placeholder for first testimonial. Replace with real client feedback once GMB reviews come in.</p><div class="ta">Client Name</div><div class="tloc">Columbia, SC</div></div>
+<div class="testc reveal rd2"><div class="tq">&ldquo;</div><p class="tt">Placeholder for second testimonial. Video testimonials will be embedded here.</p><div class="ta">Client Name</div><div class="tloc">Lexington, SC</div></div>
+<div class="testc reveal rd3"><div class="tq">&ldquo;</div><p class="tt">Placeholder for third testimonial. Builder testimonials add B2B credibility.</p><div class="ta">Client Name</div><div class="tloc">Batesburg-Leesville, SC</div></div>
+</div>
+</div></section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area"><div class="container">
+<div class="gl"></div>
+<div style="margin-top:80px"><p class="sl reveal">Service Area</p><h2 class="st reveal">Across the <em>Midlands</em></h2><p class="sd reveal" style="margin:18px auto 0">202 jobs completed across the greater Columbia metro and surrounding counties.</p></div>
+<div class="area-map reveal">
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+<defs><clipPath id="sc"><path d="M151.7,68.7 L186.7,56.4 L231.5,51.4 L433.0,57.9 L433.9,71.6 L450.9,63.6 L476.0,86.0 L473.3,101.2 L656.9,103.3 L842.3,229.0 L813.6,235.5 L777.8,257.1 L742.9,291.0 L736.6,318.5 L708.8,340.1 L672.1,340.1 L664.1,356.0 L625.5,373.3 L604.1,392.1 L570.0,400.1 L533.3,420.3 L529.7,429.7 L495.7,440.5 L459.0,468.6 L421.3,457.1 L420.4,434.7 L394.5,399.3 L372.1,389.9 L370.3,361.8 L359.5,340.1 L315.7,319.9 L287.0,295.4 L288.8,280.2 L244.9,257.8 L223.4,233.3 L185.8,216.7 L159.8,189.3 L154.4,174.1 L129.4,145.2 L112.3,147.4 L57.7,119.2 L60.4,105.5 L95.3,77.4 L151.7,68.7 Z"/></clipPath></defs>
+<rect width="900" height="520" fill="#111116" rx="16"/>
+<path d="M151.7,68.7 L186.7,56.4 L231.5,51.4 L433.0,57.9 L433.9,71.6 L450.9,63.6 L476.0,86.0 L473.3,101.2 L656.9,103.3 L842.3,229.0 L813.6,235.5 L777.8,257.1 L742.9,291.0 L736.6,318.5 L708.8,340.1 L672.1,340.1 L664.1,356.0 L625.5,373.3 L604.1,392.1 L570.0,400.1 L533.3,420.3 L529.7,429.7 L495.7,440.5 L459.0,468.6 L421.3,457.1 L420.4,434.7 L394.5,399.3 L372.1,389.9 L370.3,361.8 L359.5,340.1 L315.7,319.9 L287.0,295.4 L288.8,280.2 L244.9,257.8 L223.4,233.3 L185.8,216.7 L159.8,189.3 L154.4,174.1 L129.4,145.2 L112.3,147.4 L57.7,119.2 L60.4,105.5 L95.3,77.4 L151.7,68.7 Z" fill="rgba(200,149,57,0.015)" stroke="rgba(243,239,232,0.1)" stroke-width="1.2" stroke-linejoin="round"/>
+<g clip-path="url(#sc)" opacity="0.5">
+<line x1="0" y1="0" x2="0" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="50" y1="0" x2="50" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="100" y1="0" x2="100" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="150" y1="0" x2="150" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="200" y1="0" x2="200" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="250" y1="0" x2="250" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="300" y1="0" x2="300" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="350" y1="0" x2="350" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="400" y1="0" x2="400" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="450" y1="0" x2="450" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="500" y1="0" x2="500" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="550" y1="0" x2="550" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="600" y1="0" x2="600" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="650" y1="0" x2="650" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="700" y1="0" x2="700" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="750" y1="0" x2="750" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="800" y1="0" x2="800" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="850" y1="0" x2="850" y2="520" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="0" x2="900" y2="0" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="50" x2="900" y2="50" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="100" x2="900" y2="100" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="150" x2="900" y2="150" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="200" x2="900" y2="200" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="250" x2="900" y2="250" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="300" x2="900" y2="300" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="350" x2="900" y2="350" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="400" x2="900" y2="400" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="450" x2="900" y2="450" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+<line x1="0" y1="500" x2="900" y2="500" stroke="rgba(243,239,232,0.015)" stroke-width="0.5"/>
+</g>
+<path d="M244.0,267.3 L284.9,255.5 L333.9,235.7 L374.8,219.9 L415.7,212.0 L435.3,209.3 L464.8,202.7 L497.5,196.1 L530.2,189.5 L554.7,185.6" fill="none" stroke="rgba(243,239,232,0.05)" stroke-width="0.7" stroke-dasharray="4,4"/>
+<text x="443.3" y="205.3" fill="rgba(243,239,232,0.1)" font-family="DM Sans,sans-serif" font-size="6" font-weight="500">I-20</text>
+<path d="M211.3,97.3 L244.0,130.2 L293.1,156.6 L350.3,183.0 L383.0,196.1 L423.9,209.3 L448.4,222.5 L489.3,242.3 L530.2,268.6 L611.9,295.0 L595.6,341.1 L611.9,367.5" fill="none" stroke="rgba(243,239,232,0.05)" stroke-width="0.7" stroke-dasharray="4,4"/>
+<text x="456.4" y="218.5" fill="rgba(243,239,232,0.1)" font-family="DM Sans,sans-serif" font-size="6" font-weight="500">I-26</text>
+<path d="M443.5,84.1 L448.4,110.5 L446.8,136.8 L445.1,163.2 L443.5,183.0 L440.2,202.7 L435.3,215.9" fill="none" stroke="rgba(243,239,232,0.05)" stroke-width="0.7" stroke-dasharray="4,4"/>
+<text x="453.1" y="159.2" fill="rgba(243,239,232,0.1)" font-family="DM Sans,sans-serif" font-size="6" font-weight="500">I-77</text>
+<path d="M701.9,169.8 L677.4,196.1 L644.7,222.5 L611.9,248.9 L579.2,275.2 L546.5,301.6 L513.8,328.0 L497.5,354.3 L481.1,393.9 L464.8,426.8" fill="none" stroke="rgba(243,239,232,0.05)" stroke-width="0.7" stroke-dasharray="4,4"/>
+<text x="554.5" y="297.6" fill="rgba(243,239,232,0.1)" font-family="DM Sans,sans-serif" font-size="6" font-weight="500">I-95</text>
+<path d="M407.5,202.7 L399.4,198.8 L391.2,196.1 L383.0,193.5 L374.8,189.5 L371.6,186.9 L378.1,185.6 L387.9,188.2 L394.5,190.9 L399.4,192.2 L404.3,194.8 L407.5,198.8Z" fill="rgba(100,150,200,0.04)" stroke="rgba(243,239,232,0.04)" stroke-width="0.5"/>
+<text x="387.9" y="193.5" fill="rgba(243,239,232,0.08)" font-family="DM Sans,sans-serif" font-size="6" font-style="italic" text-anchor="middle">Lake Murray</text>
+<text x="211.3" y="301.6" fill="rgba(243,239,232,0.06)" font-family="DM Sans,sans-serif" font-size="9" font-weight="400" letter-spacing="3" text-anchor="middle">GEORGIA</text>
+<text x="489.3" y="57.7" fill="rgba(243,239,232,0.06)" font-family="DM Sans,sans-serif" font-size="9" font-weight="400" letter-spacing="3" text-anchor="middle">NORTH CAROLINA</text>
+<circle cx="435.3" cy="209.3" r="34.0" fill="rgba(200,149,57,0.035)"/>
+<circle cx="401.0" cy="212.0" r="29.0" fill="rgba(200,149,57,0.035)"/>
+<circle cx="445.1" cy="181.6" r="28.0" fill="rgba(200,149,57,0.035)"/>
+<circle cx="351.9" cy="221.2" r="27.0" fill="rgba(200,149,57,0.035)"/>
+<circle cx="383.0" cy="186.9" r="23.0" fill="rgba(200,149,57,0.035)"/>
+<circle cx="353.6" cy="181.6" r="21.0" fill="rgba(200,149,57,0.035)"/>
+<circle cx="322.5" cy="267.3" r="20.0" fill="rgba(200,149,57,0.035)"/>
+<circle cx="410.8" cy="197.5" r="18.0" fill="rgba(200,149,57,0.035)"/>
+<circle cx="376.5" cy="219.9" r="17.0" fill="rgba(200,149,57,0.035)"/>
+<circle cx="443.8" cy="180.2" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="443.6280182423519" cy="178.96641043231824" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.12s" repeatCount="indefinite"/></circle>
+<circle cx="446.8" cy="182.3" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.24s" repeatCount="indefinite"/></circle>
+<circle cx="442.80868226136926" cy="178.7510524607047" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.36s" repeatCount="indefinite"/></circle>
+<circle cx="447.6" cy="179.1" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.48s" repeatCount="indefinite"/></circle>
+<circle cx="446.70089551943727" cy="182.61900281647016" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
+<circle cx="447.1152657302588" cy="180.9409815455656" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.72s" repeatCount="indefinite"/></circle>
+<circle cx="441.45825190556013" cy="181.19796163112895" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.84s" repeatCount="indefinite"/></circle>
+<circle cx="442.99225647284254" cy="182.81249658624972" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.96s" repeatCount="indefinite"/></circle>
+<circle cx="445.71934182497284" cy="181.0125389819073" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.08s" repeatCount="indefinite"/></circle>
+<circle cx="440.89704762179997" cy="182.02171284879856" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
+<circle cx="444.93305004905994" cy="180.61451587764583" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="445.73557863497183" cy="178.55295006362007" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.44s" repeatCount="indefinite"/></circle>
+<circle cx="446.01194853458264" cy="181.79304035585866" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.56s" repeatCount="indefinite"/></circle>
+<circle cx="448.85641652927643" cy="180.99965544854717" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.68s" repeatCount="indefinite"/></circle>
+<circle cx="442.07338100297886" cy="179.64422351503893" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="442.4905053933961" cy="182.5795291695056" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.92s" repeatCount="indefinite"/></circle>
+<circle cx="437.0" cy="202.3" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.04s" repeatCount="indefinite"/></circle>
+<circle cx="416.5" cy="201.7" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.16s" repeatCount="indefinite"/></circle>
+<circle cx="421.4" cy="203.8" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.28s" repeatCount="indefinite"/></circle>
+<circle cx="441.1" cy="206.9" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+<circle cx="440.8173363580061" cy="206.48238469338082" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.52s" repeatCount="indefinite"/></circle>
+<circle cx="443.10369871677557" cy="207.29954708000832" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="433.7" cy="211.3" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.76s" repeatCount="indefinite"/></circle>
+<circle cx="448.4" cy="197.5" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.88s" repeatCount="indefinite"/></circle>
+<circle cx="440.5926110474851" cy="207.97302661065802" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="414.71288123625965" cy="202.70600479407378" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.12s" repeatCount="indefinite"/></circle>
+<circle cx="418.8253875398281" cy="199.7202624588148" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.24s" repeatCount="indefinite"/></circle>
+<circle cx="439.0636502652054" cy="208.223535575346" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.36s" repeatCount="indefinite"/></circle>
+<circle cx="443.5" cy="214.6" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.48s" repeatCount="indefinite"/></circle>
+<circle cx="416.90702459828213" cy="201.61507000991415" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
+<circle cx="440.9361102565576" cy="209.83485865093667" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.72s" repeatCount="indefinite"/></circle>
+<circle cx="418.2468180825804" cy="199.91417124394306" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.84s" repeatCount="indefinite"/></circle>
+<circle cx="413.1372034780478" cy="199.77557864850323" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.96s" repeatCount="indefinite"/></circle>
+<circle cx="440.048729326632" cy="208.8891337685271" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.08s" repeatCount="indefinite"/></circle>
+<circle cx="453.3" cy="194.8" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
+<circle cx="450.6889095850664" cy="195.0348734911112" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="417.85461082148066" cy="200.46776757943664" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.44s" repeatCount="indefinite"/></circle>
+<circle cx="417.72414020247885" cy="200.72595202514654" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.56s" repeatCount="indefinite"/></circle>
+<circle cx="353.6" cy="220.5" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.68s" repeatCount="indefinite"/></circle>
+<circle cx="354.2899933547757" cy="222.55684594761024" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="352.38643008728945" cy="219.29298042389442" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.92s" repeatCount="indefinite"/></circle>
+<circle cx="354.8837995933372" cy="223.1710489293947" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.04s" repeatCount="indefinite"/></circle>
+<circle cx="352.1270953573927" cy="219.4454773289568" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.16s" repeatCount="indefinite"/></circle>
+<circle cx="351.0077942246812" cy="222.33278797442793" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.28s" repeatCount="indefinite"/></circle>
+<circle cx="350.45147565158027" cy="221.4421464531506" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+<circle cx="354.0779907403381" cy="219.0340478710464" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.52s" repeatCount="indefinite"/></circle>
+<circle cx="350.55639640898846" cy="220.53251434105522" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="354.37856380293516" cy="218.52641528969022" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.76s" repeatCount="indefinite"/></circle>
+<circle cx="353.1102116730954" cy="220.99320733361105" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.88s" repeatCount="indefinite"/></circle>
+<circle cx="351.9845062518215" cy="222.70506588467185" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="351.7904513322736" cy="221.22017643320004" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.12s" repeatCount="indefinite"/></circle>
+<circle cx="356.329990317886" cy="221.20619957132584" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.24s" repeatCount="indefinite"/></circle>
+<circle cx="354.8169561462942" cy="218.64622637590253" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.36s" repeatCount="indefinite"/></circle>
+<circle cx="352.1651698887711" cy="220.10270308180327" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.48s" repeatCount="indefinite"/></circle>
+<circle cx="351.8552608639062" cy="223.27828333884327" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
+<circle cx="349.37757653661976" cy="223.90008112741154" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.72s" repeatCount="indefinite"/></circle>
+<circle cx="353.7825291437579" cy="221.7414680812575" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.84s" repeatCount="indefinite"/></circle>
+<circle cx="352.80783129991687" cy="221.1395665148576" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.96s" repeatCount="indefinite"/></circle>
+<circle cx="401.0" cy="211.8" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.08s" repeatCount="indefinite"/></circle>
+<circle cx="402.16295156098874" cy="210.81868317468266" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
+<circle cx="400.73108593564643" cy="211.72693454358847" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="403.7593258272935" cy="213.31517666203408" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.44s" repeatCount="indefinite"/></circle>
+<circle cx="400.420747279642" cy="213.0779268733752" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.56s" repeatCount="indefinite"/></circle>
+<circle cx="399.60199858844504" cy="211.81238023874786" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.68s" repeatCount="indefinite"/></circle>
+<circle cx="398.3782779956268" cy="214.78406194593427" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="397.86022671378555" cy="211.7491967674005" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.92s" repeatCount="indefinite"/></circle>
+<circle cx="402.605218298622" cy="212.6994916478233" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.04s" repeatCount="indefinite"/></circle>
+<circle cx="405.2358962335343" cy="210.41296017796626" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.16s" repeatCount="indefinite"/></circle>
+<circle cx="401.5784410696528" cy="211.3219576944461" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.28s" repeatCount="indefinite"/></circle>
+<circle cx="403.9579767977205" cy="212.0630089887021" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+<circle cx="402.56273038580247" cy="211.10945798888744" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.52s" repeatCount="indefinite"/></circle>
+<circle cx="403.3734438660761" cy="210.55052841902" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="404.27532763739356" cy="212.7806924118322" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.76s" repeatCount="indefinite"/></circle>
+<circle cx="398.5897168347064" cy="212.50168415996808" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.88s" repeatCount="indefinite"/></circle>
+<circle cx="400.31923451575847" cy="213.618357739753" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="383.0" cy="187.2" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.12s" repeatCount="indefinite"/></circle>
+<circle cx="380.3776384492827" cy="184.4110007966157" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.24s" repeatCount="indefinite"/></circle>
+<circle cx="383.44896670224705" cy="186.70042969651828" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.36s" repeatCount="indefinite"/></circle>
+<circle cx="383.90577498204004" cy="188.2090531117795" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.48s" repeatCount="indefinite"/></circle>
+<circle cx="382.5792701570509" cy="186.289131999017" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
+<circle cx="380.3886398475736" cy="185.30970066329283" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.72s" repeatCount="indefinite"/></circle>
+<circle cx="383.6466917794549" cy="188.7406888831585" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.84s" repeatCount="indefinite"/></circle>
+<circle cx="379.4466756355702" cy="188.10465925340822" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.96s" repeatCount="indefinite"/></circle>
+<circle cx="383.31017642943664" cy="186.6475816746085" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.08s" repeatCount="indefinite"/></circle>
+<circle cx="381.40737295953403" cy="187.0789343864938" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
+<circle cx="384.4870729946313" cy="185.6875719639787" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="380.67422547305637" cy="189.46042822194624" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.44s" repeatCount="indefinite"/></circle>
+<circle cx="352.8" cy="181.6" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.56s" repeatCount="indefinite"/></circle>
+<circle cx="354.658802424072" cy="180.33901694311777" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.68s" repeatCount="indefinite"/></circle>
+<circle cx="351.5755836640761" cy="180.00268407418892" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="352.90165294045624" cy="180.4446345189369" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.92s" repeatCount="indefinite"/></circle>
+<circle cx="355.03224231591446" cy="180.17114150822042" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.04s" repeatCount="indefinite"/></circle>
+<circle cx="354.02201875532836" cy="180.85398721990592" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.16s" repeatCount="indefinite"/></circle>
+<circle cx="352.9429706210286" cy="180.63568966948094" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.28s" repeatCount="indefinite"/></circle>
+<circle cx="353.65854739777865" cy="182.91598046145282" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+<circle cx="353.331023742216" cy="183.47051754587818" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.52s" repeatCount="indefinite"/></circle>
+<circle cx="351.32789691365" cy="181.85486550323583" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="410.0" cy="197.7" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.76s" repeatCount="indefinite"/></circle>
+<circle cx="410.3589487731211" cy="198.0338076632218" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.88s" repeatCount="indefinite"/></circle>
+<circle cx="411.36989389725517" cy="199.37837136168474" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="410.46525885165164" cy="196.93853253880826" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.12s" repeatCount="indefinite"/></circle>
+<circle cx="407.9115099333249" cy="195.89261345262918" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.24s" repeatCount="indefinite"/></circle>
+<circle cx="411.189266276625" cy="196.39195395614814" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.36s" repeatCount="indefinite"/></circle>
+<circle cx="322.5" cy="267.3" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.48s" repeatCount="indefinite"/></circle>
+<circle cx="320.35641758968967" cy="267.49979371402105" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
+<circle cx="320.57698060179735" cy="269.80484511111445" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.72s" repeatCount="indefinite"/></circle>
+<circle cx="324.2663080320616" cy="267.6819539823774" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.84s" repeatCount="indefinite"/></circle>
+<circle cx="322.5940283191209" cy="269.13874374161446" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.96s" repeatCount="indefinite"/></circle>
+<circle cx="322.6744070418531" cy="267.1755136726367" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.08s" repeatCount="indefinite"/></circle>
+<circle cx="323.08199509369314" cy="266.68058946676314" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
+<circle cx="323.0085502526246" cy="265.3464092480256" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="376.0" cy="219.5" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.44s" repeatCount="indefinite"/></circle>
+<circle cx="378.3471822220002" cy="220.48928586864108" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.56s" repeatCount="indefinite"/></circle>
+<circle cx="375.9541583938625" cy="220.31988955571316" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.68s" repeatCount="indefinite"/></circle>
+<circle cx="375.68215358749313" cy="217.00869954184947" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="377.093996251434" cy="220.90289389819313" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.92s" repeatCount="indefinite"/></circle>
+<circle cx="504.5" cy="176.8" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.04s" repeatCount="indefinite"/></circle>
+<circle cx="505.6584447591795" cy="175.7193475003984" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.16s" repeatCount="indefinite"/></circle>
+<circle cx="505.7250024177232" cy="175.4830339537897" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.28s" repeatCount="indefinite"/></circle>
+<circle cx="505.6869068950662" cy="177.2902175420574" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+<circle cx="501.94183411406624" cy="175.13726199490836" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.52s" repeatCount="indefinite"/></circle>
+<circle cx="475.2" cy="187.2" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="475.5487653959904" cy="185.66050864543078" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.76s" repeatCount="indefinite"/></circle>
+<circle cx="474.95998186383594" cy="187.52846060118506" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.88s" repeatCount="indefinite"/></circle>
+<circle cx="475.71643321696797" cy="189.08629731331226" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="475.2523251558343" cy="185.8653663464286" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.12s" repeatCount="indefinite"/></circle>
+<circle cx="463.8" cy="276.3" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.24s" repeatCount="indefinite"/></circle>
+<circle cx="464.21364353057646" cy="276.9033965737872" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.36s" repeatCount="indefinite"/></circle>
+<circle cx="462.2276321037757" cy="274.63547678292116" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.48s" repeatCount="indefinite"/></circle>
+<circle cx="462.5172483232188" cy="277.6153652474594" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
+<circle cx="462.80150652512543" cy="277.99654854656944" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.72s" repeatCount="indefinite"/></circle>
+<circle cx="314.0" cy="209.1" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.84s" repeatCount="indefinite"/></circle>
+<circle cx="314.04983190201904" cy="209.73517292124663" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.96s" repeatCount="indefinite"/></circle>
+<circle cx="315.184323491774" cy="211.2294914517368" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.08s" repeatCount="indefinite"/></circle>
+<circle cx="315.0458113082981" cy="210.57368528347104" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
+<circle cx="312.58007905351514" cy="208.52076326293871" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="428.0" cy="210.0" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.44s" repeatCount="indefinite"/></circle>
+<circle cx="427.336161195469" cy="209.61161882561734" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.56s" repeatCount="indefinite"/></circle>
+<circle cx="428.5140203916266" cy="211.40231170383638" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.68s" repeatCount="indefinite"/></circle>
+<circle cx="428.4788486252814" cy="209.15169751694825" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="357.43584054586046" cy="219.9538389893718" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.92s" repeatCount="indefinite"/></circle>
+<circle cx="356.60742347533426" cy="221.41530149751205" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.04s" repeatCount="indefinite"/></circle>
+<circle cx="357.6492914140094" cy="221.37041077359208" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.16s" repeatCount="indefinite"/></circle>
+<circle cx="358.0654470160037" cy="221.37236686380564" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.28s" repeatCount="indefinite"/></circle>
+<circle cx="491.4" cy="179.4" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+<circle cx="493.5279996990157" cy="178.70773498252743" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.52s" repeatCount="indefinite"/></circle>
+<circle cx="493.2300838048256" cy="180.27303691497636" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="424.1" cy="243.6" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.76s" repeatCount="indefinite"/></circle>
+<circle cx="423.76390821503145" cy="243.5417255338889" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.88s" repeatCount="indefinite"/></circle>
+<circle cx="340.8" cy="230.3" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="339.4255037992968" cy="229.31470627022594" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.12s" repeatCount="indefinite"/></circle>
+<circle cx="380.6" cy="254.5" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.24s" repeatCount="indefinite"/></circle>
+<circle cx="380.15342133603855" cy="253.31575218179665" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.36s" repeatCount="indefinite"/></circle>
+<circle cx="256.9" cy="302.9" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.48s" repeatCount="indefinite"/></circle>
+<circle cx="258.4715387575229" cy="305.0917309457591" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
+<circle cx="358.6583570385451" cy="218.74364005111644" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.72s" repeatCount="indefinite"/></circle>
+<circle cx="360.0835841849649" cy="219.00339452895474" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.84s" repeatCount="indefinite"/></circle>
+<circle cx="358.17943715833553" cy="216.80517696010324" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.96s" repeatCount="indefinite"/></circle>
+<circle cx="355.5149840073134" cy="218.55269410834703" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.08s" repeatCount="indefinite"/></circle>
+<circle cx="356.6021722713539" cy="217.75170309279" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
+<circle cx="357.5848803323344" cy="219.96381042508244" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="358.921844156463" cy="217.0297727488438" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.44s" repeatCount="indefinite"/></circle>
+<circle cx="358.06247117260824" cy="220.35719724948612" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.56s" repeatCount="indefinite"/></circle>
+<circle cx="356.40347554139703" cy="220.03553964447946" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.68s" repeatCount="indefinite"/></circle>
+<circle cx="356.9746019339386" cy="217.94791601666054" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="360.7827476759067" cy="217.21218238163337" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.92s" repeatCount="indefinite"/></circle>
+<circle cx="361.230512546902" cy="218.3089187583555" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.04s" repeatCount="indefinite"/></circle>
+<circle cx="348.7" cy="215.9" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.16s" repeatCount="indefinite"/></circle>
+<circle cx="348.04851890581057" cy="214.64980859756628" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.28s" repeatCount="indefinite"/></circle>
+<circle cx="347.2561412208715" cy="214.42635859362147" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+<circle cx="349.3769064935871" cy="216.0136721935372" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.52s" repeatCount="indefinite"/></circle>
+<circle cx="295.0" cy="280.0" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="255.3" cy="270.7" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.76s" repeatCount="indefinite"/></circle>
+<circle cx="202.0" cy="356.4" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.88s" repeatCount="indefinite"/></circle>
+<circle cx="356.8" cy="279.2" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="357.410023682328" cy="278.01624642952953" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.12s" repeatCount="indefinite"/></circle>
+<circle cx="356.8730501233145" cy="279.1320897437152" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.24s" repeatCount="indefinite"/></circle>
+<circle cx="381.5" cy="308.8" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.36s" repeatCount="indefinite"/></circle>
+<circle cx="371.6" cy="287.5" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.48s" repeatCount="indefinite"/></circle>
+<circle cx="232.4" cy="241.5" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
+<circle cx="309.3" cy="231.3" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.72s" repeatCount="indefinite"/></circle>
+<circle cx="307.54531493750335" cy="229.5754411054454" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.84s" repeatCount="indefinite"/></circle>
+<circle cx="408.4" cy="330.3" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.96s" repeatCount="indefinite"/></circle>
+<circle cx="333.9" cy="68.0" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.08s" repeatCount="indefinite"/></circle>
+<circle cx="235.0" cy="112.0" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.2s" repeatCount="indefinite"/></circle>
+<circle cx="195.9" cy="140.4" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.32s" repeatCount="indefinite"/></circle>
+<circle cx="235.37209822477965" cy="110.44494988180757" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.44s" repeatCount="indefinite"/></circle>
+<circle cx="212.9" cy="150.7" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.56s" repeatCount="indefinite"/></circle>
+<circle cx="168.1" cy="168.9" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.68s" repeatCount="indefinite"/></circle>
+<circle cx="477.7" cy="114.3" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="436.2" cy="87.4" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.92s" repeatCount="indefinite"/></circle>
+<circle cx="533.0" cy="208.4" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.04s" repeatCount="indefinite"/></circle>
+<circle cx="547.8" cy="219.7" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.16s" repeatCount="indefinite"/></circle>
+<circle cx="434.7" cy="302.0" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.28s" repeatCount="indefinite"/></circle>
+<circle cx="460.8" cy="222.0" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.4s" repeatCount="indefinite"/></circle>
+<circle cx="488.5" cy="225.7" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.52s" repeatCount="indefinite"/></circle>
+<circle cx="372.4" cy="161.5" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.64s" repeatCount="indefinite"/></circle>
+<circle cx="396.7" cy="168.2" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.76s" repeatCount="indefinite"/></circle>
+<circle cx="426.0" cy="159.1" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="2.88s" repeatCount="indefinite"/></circle>
+<circle cx="250.2" cy="183.5" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.0s" repeatCount="indefinite"/></circle>
+<circle cx="175.3" cy="135.5" r="2.2" fill="#C89539" opacity="0.85"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="0.12s" repeatCount="indefinite"/></circle>
+<circle cx="352.3" cy="220.9" r="5" fill="none" stroke="#C89539" stroke-width="1.5" opacity="0.6"/>
+<circle cx="352.3" cy="220.9" r="8" fill="none" stroke="#C89539" stroke-width="0.5" opacity="0.3"><animate attributeName="r" values="8;14;8" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite"/></circle>
+<text x="435.3" y="197.3" fill="#C89539" font-family="DM Sans,sans-serif" font-size="10" text-anchor="middle" font-weight="600">COLUMBIA</text>
+<text x="401.0" y="202.0" fill="#C89539" font-family="DM Sans,sans-serif" font-size="8" text-anchor="middle" font-weight="500">LEXINGTON</text>
+<text x="445.1" y="171.6" fill="#C89539" font-family="DM Sans,sans-serif" font-size="8" text-anchor="middle" font-weight="500">BLYTHEWOOD</text>
+<text x="383.0" y="176.9" fill="rgba(243,239,232,0.45)" font-family="DM Sans,sans-serif" font-size="7" text-anchor="middle" font-weight="400">CHAPIN</text>
+<text x="353.6" y="172.6" fill="rgba(243,239,232,0.4)" font-family="DM Sans,sans-serif" font-size="7" text-anchor="middle" font-weight="400">PROSPERITY</text>
+<text x="322.5" y="257.3" fill="rgba(243,239,232,0.4)" font-family="DM Sans,sans-serif" font-size="7" text-anchor="middle" font-weight="400">AIKEN</text>
+<text x="410.8" y="188.5" fill="rgba(243,239,232,0.4)" font-family="DM Sans,sans-serif" font-size="7" text-anchor="middle" font-weight="400">IRMO</text>
+<text x="474.6" y="177.9" fill="rgba(243,239,232,0.4)" font-family="DM Sans,sans-serif" font-size="7" text-anchor="middle" font-weight="400">ELGIN</text>
+<text x="504.0" y="167.4" fill="rgba(243,239,232,0.4)" font-family="DM Sans,sans-serif" font-size="7" text-anchor="middle" font-weight="400">CAMDEN</text>
+<text x="463.1" y="267.5" fill="rgba(243,239,232,0.35)" font-family="DM Sans,sans-serif" font-size="7" text-anchor="middle" font-weight="400">ORANGEBURG</text>
+<text x="376.5" y="210.9" fill="rgba(243,239,232,0.35)" font-family="DM Sans,sans-serif" font-size="7" text-anchor="middle" font-weight="400">GILBERT</text>
+<text x="364.3" y="223.9" fill="#C89539" font-family="DM Sans,sans-serif" font-size="7" text-anchor="middle" font-weight="600">HQ</text>
+<text x="450.0" y="508" fill="rgba(243,239,232,0.3)" font-family="DM Sans,sans-serif" font-size="10" text-anchor="middle" letter-spacing="4">202 JOBS COMPLETED  |  SOUTH CAROLINA &amp; GEORGIA</text>
+</svg>
+</div>
+<p class="area-cities reveal">Columbia &middot; Lexington &middot; Batesburg-Leesville &middot; Irmo &middot; Chapin &middot; West Columbia &middot; Cayce &middot; Blythewood &middot; Elgin &middot; Lugoff &middot; Swansea &middot; Saluda</p>
+<div class="area-badge reveal">Owner-Operated &middot; Midlands Born</div>
+</div></section>
+
+<!-- CTA / CONTACT -->
+<section class="cta" id="contact"><div class="cta-glow"></div><div class="container">
+<h2 class="reveal">Ready for <em>Seamless?</em></h2>
+<p class="reveal">Get a free quote in under 24 hours. No pressure. No gimmicks. Just honest work from a crew that shows up.</p>
+<form class="cf reveal" action="#" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="email" name="email" placeholder="Email Address" class="full">
+<input type="text" name="address" placeholder="Property Address" class="full">
+<select name="service" class="full"><option value="" disabled selected>What do you need?</option><option>New Gutter Installation</option><option>Gutter Replacement</option><option>Gutter Guards</option><option>Gutter Repair</option><option>Gutter Cleaning</option><option>Storm Damage / Insurance</option><option>Other</option></select>
+<select name="heard" class="full"><option value="" disabled selected>How did you hear about us?</option><option>Google</option><option>Facebook</option><option>Referral</option><option>Saw Us Working</option><option>Other</option></select>
+<textarea name="message" placeholder="Tell us about your project (optional)" class="full"></textarea>
+<div class="full"><button type="submit" class="btn-p" style="width:100%;justify-content:center;border:none">Submit Request <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+</form>
+</div></section>
+
+<!-- FOOTER -->
+<footer><div class="container">
+<div class="fg">
+<div><div class="fb" style="display:flex;align-items:center"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px;vertical-align:middle"><g transform="rotate(90 16 16)"><path d="M6 8l8 8-8 8" stroke="#C89539" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8l8 8-8 8" stroke="#C89539" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/></g></svg>THE SEAMLESS <span>BROTHERS</span></div><p class="ft">Elevated Gutter Solutions<br>Batesburg-Leesville, SC</p><a href="tel:8034806654" style="color:var(--gold);text-decoration:none;font-size:15px;font-weight:600">(803) 480-6654</a></div>
+<div class="fc"><h4>Services</h4><a href="#services">Gutter Installation</a><a href="#services">Gutter Guards</a><a href="#services">Gutter Repair</a><a href="#services">Gutter Cleaning</a><a href="#services">Storm Damage</a></div>
+<div class="fc"><h4>Company</h4><a href="#about">About Us</a><a href="#team">The Brothers</a><a href="#process">Our Process</a><a href="#area">Service Area</a></div>
+<div class="fc"><h4>Connect</h4><a href="tel:8034806654">(803) 480-6654</a><a href="mailto:tylerlist@thegutterbrothers.co">Email Us</a><a href="#">Facebook</a><a href="#">Google Reviews</a></div>
+</div>
+<div class="fbot"><div class="fcopy">&copy; 2026 The Seamless Brothers LLC. All rights reserved.</div>
+<div class="fsoc"><a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a></div>
+</div>
+</div></footer>
+
+<script>
+const nb=document.getElementById('navbar');window.addEventListener('scroll',()=>{nb.classList.toggle('scrolled',window.scrollY>60)});
+const tg=document.getElementById('navToggle'),nl=document.getElementById('navLinks');tg.addEventListener('click',()=>{tg.classList.toggle('active');nl.classList.toggle('open')});nl.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{tg.classList.remove('active');nl.classList.remove('open')})});
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{document.querySelectorAll('.wc').forEach((c,i)=>{const s=.02+(i*.008),r=c.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0)c.style.transform=`translateY(${(r.top-window.innerHeight/2)*s}px)`})});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+</script>
+</body>
+</html>
