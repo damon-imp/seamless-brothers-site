@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Seamless Brothers | Elevated Gutter Solutions | Midlands, SC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C89539;--gold-light:#D4A94E;--gold-dark:#A67A2E;--black:#0A0A0E;--black-card:#111116;--black-surface:#18181E;--white:#F3EFE8;--white-90:rgba(243,239,232,.9);--white-70:rgba(243,239,232,.7);--white-50:rgba(243,239,232,.5);--white-40:rgba(243,239,232,.4);--white-20:rgba(243,239,232,.2);--white-15:rgba(243,239,232,.15);--white-08:rgba(243,239,232,.08);--white-04:rgba(243,239,232,.04);--font:'DM Sans',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif;--r:12px;--rs:8px;--rl:20px;--rf:100px}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--black);color:var(--white);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* NAV */.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;background:rgba(10,10,14,0);transition:all .5s}.navbar.scrolled{padding:12px 0;background:rgba(10,10,14,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--white-08)}.navbar .container{display:flex;justify-content:space-between;align-items:center}.nav-brand{font-size:18px;font-weight:700;text-decoration:none;color:var(--white);letter-spacing:.5px}.nav-brand span{color:var(--gold)}.nav-links{display:flex;gap:32px;align-items:center}.nav-links a{color:var(--white-70);font-size:13px;text-decoration:none;font-weight:500;transition:color .3s;letter-spacing:1px;text-transform:uppercase}.nav-links a:hover{color:var(--white)}.nav-cta{background:var(--gold);color:var(--black);padding:10px 28px;font-size:13px;font-weight:600;text-decoration:none;border-radius:var(--rf);transition:all .3s;border:1.5px solid var(--gold);letter-spacing:.5px;text-transform:uppercase}.nav-cta:hover{background:transparent;color:var(--gold)}.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:.3s;border-radius:2px}
+
+/* HERO */.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.hero-video-wrap{position:absolute;inset:0;z-index:0}.hero-video-wrap video{width:100%;height:100%;object-fit:cover}.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,14,.7) 0%,rgba(10,10,14,.35) 40%,rgba(10,10,14,.85) 100%)}.hero-fallback{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 20% 50%,rgba(200,149,57,.08) 0%,transparent 55%),radial-gradient(ellipse at 80% 30%,rgba(200,149,57,.05) 0%,transparent 50%),linear-gradient(160deg,#0A0A0E 0%,#12121A 50%,#0A0A0E 100%)}.hero-noise{position:absolute;inset:0;z-index:2;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.hero-content{position:relative;z-index:3;text-align:center;padding:140px 24px 100px;max-width:820px;margin:0 auto}.hero-tagline{font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-weight:500;animation:fadeUp .8s ease .2s both}.hero h1{font-family:var(--serif);font-size:clamp(42px,7.5vw,80px);font-weight:600;line-height:1.05;letter-spacing:-1px;margin-bottom:24px;animation:fadeUp .8s ease .4s both}.hero h1 em{font-style:italic;color:var(--gold)}.hero-sub{font-size:17px;color:var(--white-70);max-width:500px;margin:0 auto 48px;line-height:1.7;animation:fadeUp .8s ease .6s both}.hero-cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s ease .8s both}.btn-p{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--black);padding:16px 36px;font-size:13px;font-weight:700;text-decoration:none;text-transform:uppercase;border-radius:var(--rf);transition:all .4s;letter-spacing:1px;border:1.5px solid var(--gold);font-family:var(--font);cursor:pointer}.btn-p:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 16px 48px rgba(200,149,57,.3)}.btn-s{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);padding:16px 36px;font-size:13px;font-weight:600;text-decoration:none;text-transform:uppercase;border-radius:var(--rf);transition:all .4s;letter-spacing:1px;border:1.5px solid var(--white-20);font-family:var(--font)}.btn-s:hover{border-color:var(--white-50);background:var(--white-08)}.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;animation:float 3s ease-in-out infinite}.hero-scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,var(--gold),transparent);margin:0 auto}
+
+/* SHARED */.sl{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:600}.st{font-family:var(--serif);font-size:clamp(32px,4.5vw,52px);font-weight:600;line-height:1.1;letter-spacing:-.5px;margin-bottom:18px}.st em{font-style:italic;color:var(--gold)}.sd{font-size:16px;color:var(--white-70);max-width:520px;line-height:1.7}.gl{width:100%;height:1px;background:linear-gradient(to right,transparent,rgba(200,149,57,.25),transparent)}
+
+/* SERVICES */.services{padding:140px 0 120px;position:relative}.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:60px}.sc{background:var(--black-card);padding:40px 28px;border-radius:var(--r);position:relative;overflow:hidden;transition:all .45s;border:1px solid var(--white-08);cursor:default}.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0;transition:opacity .4s}.sc:hover{background:var(--black-surface);transform:translateY(-6px);border-color:rgba(200,149,57,.15);box-shadow:0 24px 64px rgba(0,0,0,.5)}.sc:hover::before{opacity:1}.si{width:48px;height:48px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;background:rgba(200,149,57,.08);border-radius:var(--rs);color:var(--gold)}.sc h3{font-size:18px;font-weight:600;margin-bottom:12px}.sc p{font-size:14px;color:var(--white-70);line-height:1.65}
+
+/* PROCESS */.process{padding:120px 0;position:relative;overflow:hidden}.process-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(200,149,57,.04),transparent 60%)}.pt{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;position:relative;z-index:1}.pt::before{content:'';position:absolute;top:40px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(to right,var(--gold-dark),var(--gold),var(--gold-dark));opacity:.3}.ps{text-align:center;padding:0 20px;position:relative}.sm{width:80px;height:80px;border-radius:50%;margin:0 auto 28px;display:flex;align-items:center;justify-content:center;background:var(--black-card);border:2px solid rgba(200,149,57,.3);font-family:var(--serif);font-size:28px;font-weight:600;color:var(--gold);position:relative;z-index:2;transition:all .4s}.ps:hover .sm{border-color:var(--gold);box-shadow:0 0 40px rgba(200,149,57,.2);transform:scale(1.08)}.ps h3{font-size:16px;font-weight:600;margin-bottom:10px;letter-spacing:.3px}.ps p{font-size:14px;color:var(--white-70);line-height:1.6}
+
+/* WHY US */.why{padding:120px 0;position:relative}.wg{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}.ws{display:grid;grid-template-columns:1fr 1fr;gap:16px}.wc{padding:32px;border-radius:var(--r);background:var(--black-card);border:1px solid var(--white-08);transition:all .4s}.wc:hover{border-color:rgba(200,149,57,.2);transform:translateY(-2px)}.wn{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:6px}.wl{font-size:13px;color:var(--white-50);line-height:1.4}.wy-desc{margin-bottom:36px}.wy-list{list-style:none;display:flex;flex-direction:column;gap:20px}.wy-list li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--white-70);line-height:1.6}.wd{flex-shrink:0;width:8px;height:8px;margin-top:7px;background:var(--gold);border-radius:50%}
+
+/* TEAM */.team{padding:120px 0;position:relative;overflow:hidden}.team-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--black) 0%,rgba(200,149,57,.02) 50%,var(--black) 100%)}.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;position:relative;z-index:1}.tc{background:var(--black-card);border-radius:var(--rl);overflow:hidden;border:1px solid var(--white-08);transition:all .4s}.tc:hover{border-color:rgba(200,149,57,.2);transform:translateY(-4px)}.tp{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,var(--black-surface) 0%,var(--black-card) 100%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:24px;color:var(--white-20);font-size:13px;letter-spacing:2px;text-transform:uppercase}.ti{padding:24px}.tn{font-size:18px;font-weight:600;margin-bottom:4px}.tr{font-size:13px;color:var(--gold);font-weight:500;letter-spacing:.5px}
+
+/* TESTIMONIALS */.test{padding:120px 0;position:relative}.testg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}.testc{background:var(--black-card);padding:36px;border-radius:var(--r);border:1px solid var(--white-08);transition:all .4s}.testc:hover{border-color:rgba(200,149,57,.15)}.tq{font-size:40px;color:var(--gold);opacity:.3;font-family:var(--serif);line-height:1;margin-bottom:16px}.tt{font-size:15px;color:var(--white-70);line-height:1.7;margin-bottom:24px;font-style:italic}.ta{font-size:14px;font-weight:600}.tloc{font-size:12px;color:var(--white-40);margin-top:2px}
+
+/* AREA */.area{padding:120px 0;text-align:center;position:relative;overflow:hidden}.area-map{max-width:700px;margin:48px auto 0}.area-pin{fill:var(--gold);filter:drop-shadow(0 0 6px rgba(200,149,57,.5));animation:pinPulse 2s ease-in-out infinite}.area-pin:nth-child(2n){animation-delay:.4s}.area-pin:nth-child(3n){animation-delay:.8s}.area-cities{color:var(--white-70);max-width:500px;margin:28px auto 0;font-size:15px;line-height:1.7}.area-badge{display:inline-block;padding:12px 32px;margin-top:28px;border:1px solid rgba(200,149,57,.3);border-radius:var(--rf);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;transition:all .3s}.area-badge:hover{background:rgba(200,149,57,.08);border-color:var(--gold)}
+
+/* CTA */.cta{padding:160px 0;text-align:center;position:relative;overflow:hidden}.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(200,149,57,.06),transparent 60%);pointer-events:none}.cta h2{font-family:var(--serif);font-size:clamp(36px,5vw,60px);font-weight:600;margin-bottom:18px;position:relative;z-index:1}.cta h2 em{font-style:italic;color:var(--gold)}.cta>div>p{font-size:16px;color:var(--white-70);max-width:460px;margin:0 auto 48px;line-height:1.7;position:relative;z-index:1}.cf{max-width:560px;margin:48px auto 0;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:16px}.cf .full{grid-column:1/-1}.cf input,.cf textarea,.cf select{width:100%;padding:16px 20px;background:var(--black-card);border:1px solid var(--white-08);border-radius:var(--rs);color:var(--white);font-family:var(--font);font-size:14px;transition:border-color .3s;outline:none}.cf input::placeholder,.cf textarea::placeholder{color:var(--white-40)}.cf input:focus,.cf textarea:focus,.cf select:focus{border-color:rgba(200,149,57,.4)}.cf textarea{resize:vertical;min-height:120px}.cf select{cursor:pointer;-webkit-appearance:none}.cf select option{background:var(--black-card);color:var(--white)}
+
+/* FOOTER */footer{padding:56px 0 40px;border-top:1px solid var(--white-08)}.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}.fb{font-size:18px;font-weight:700;margin-bottom:12px}.fb span{color:var(--gold)}.ft{font-size:13px;color:var(--white-40);margin-bottom:16px}.fc h4{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:600}.fc a{display:block;color:var(--white-50);font-size:14px;text-decoration:none;margin-bottom:10px;transition:color .3s}.fc a:hover{color:var(--white)}.fbot{margin-top:48px;padding-top:24px;border-top:1px solid var(--white-08);display:flex;justify-content:space-between;align-items:center}.fcopy{font-size:12px;color:var(--white-40)}.fsoc{display:flex;gap:16px}.fsoc a{color:var(--white-40);transition:color .3s}.fsoc a:hover{color:var(--gold)}
+
+/* ANIM */@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-8px)}}@keyframes pinPulse{0%,100%{opacity:.7}50%{opacity:1}}.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.35s}
+
+/* RESPONSIVE */@media(max-width:1024px){.sg{grid-template-columns:repeat(2,1fr)}.pt{grid-template-columns:repeat(2,1fr);gap:32px}.pt::before{display:none}.wg{gap:48px}.testg{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr;gap:32px}}@media(max-width:768px){.container{padding:0 20px}.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,14,.97);backdrop-filter:blur(24px);flex-direction:column;justify-content:center;align-items:center;gap:28px;z-index:200}.nav-links.open{display:flex}.nav-links a{font-size:16px}.nav-toggle{display:block;z-index:300}.nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.nav-toggle.active span:nth-child(2){opacity:0}.nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}.hero{min-height:100svh}.hero-content{padding:100px 20px 60px}.hero-tagline{font-size:10px;letter-spacing:4px}.hero h1{font-size:36px}.hero-sub{font-size:15px}.hero-cta-group{flex-direction:column;align-items:center}.btn-p,.btn-s{width:100%;max-width:320px;justify-content:center}.services,.process,.why,.team,.test,.area,.cta{padding:80px 0}.sg{grid-template-columns:1fr}.pt{grid-template-columns:1fr 1fr;gap:24px}.wg{grid-template-columns:1fr}.ws{grid-template-columns:1fr 1fr}.tg{grid-template-columns:1fr;max-width:360px;margin-left:auto;margin-right:auto}.cf{grid-template-columns:1fr}.fg{grid-template-columns:1fr;gap:32px}.fbot{flex-direction:column;gap:16px;text-align:center}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar"><div class="container">
+<a href="#" class="nav-brand" style="display:flex;align-items:center"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px;vertical-align:middle"><g transform="rotate(90 16 16)"><path d="M6 8l8 8-8 8" stroke="#C89539" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8l8 8-8 8" stroke="#C89539" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/></g></svg>THE SEAMLESS <span>BROTHERS</span></a>
+<div class="nav-links" id="navLinks">
+<a href="#services">Services</a><a href="#process">Process</a><a href="#about">About</a><a href="#team">Team</a><a href="#area">Areas</a><a href="#contact" class="nav-cta">Get a Quote</a>
+</div>
+<button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-video-wrap">
+<video autoplay muted loop playsinline><!-- <source src="hero-video.mp4" type="video/mp4"> --></video>
+</div>
+<div class="hero-fallback"></div>
+<div class="hero-overlay"></div>
+<div class="hero-noise"></div>
+<div class="hero-content">
+<p class="hero-tagline">Elevated Gutter Solutions</p>
+<h1>Your Gutters.<br><em>Our Standard.</em></h1>
+<p class="hero-sub">Owner-operated. Precision-installed. Built to protect your home for decades. Serving the Midlands of South Carolina.</p>
+<div class="hero-cta-group">
+<a href="#contact" class="btn-p">Get Your Free Quote <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+<a href="tel:8034806654" class="btn-s"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(803) 480-6654</a>
+</div>
+</div>
+<div class="hero-scroll"><div class="hero-scroll-line"></div></div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services"><div class="container">
+<div class="gl"></div>
+<div style="margin-top:80px"><p class="sl reveal">What We Do</p><h2 class="st reveal">Premium Gutter <em>Solutions</em></h2><p class="sd reveal">Every install is measured, fabricated on site, and installed by the owners. No subcontractors. No shortcuts. No callbacks.</p></div>
+<div class="sg">
+<div class="sc reveal rd1"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Seamless Gutter Installation</h3><p>Custom-fabricated 6-inch K-style seamless gutters built on site with our own machines. Perfect fit. Zero seams. Zero leaks.</p></div>
+<div class="sc reveal rd2"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Gutter Guards</h3><p>Bulldog and Grizzly guard systems to keep leaves and debris out permanently. Stop cleaning. Start protecting.</p></div>
+<div class="sc reveal rd3"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><h3>Gutter Repair</h3><p>Sagging, leaking, or pulling away from the fascia? We diagnose the problem and fix it right the first time.</p></div>
+<div class="sc reveal rd1"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Gutter Cleaning</h3><p>Full cleanout, flush, and inspection. We clear the debris and check for damage before it becomes a bigger problem.</p></div>
+<div class="sc reveal rd2"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 118 2.83"/><path d="M22 12A10 10 0 0012 2v10z"/></svg></div><h3>Downspout Solutions</h3><p>Custom routing, extensions, and underground drainage to move water away from your foundation. Engineered for your property.</p></div>
+<div class="sc reveal rd3"><div class="si"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div><h3>Storm Damage &amp; Insurance</h3><p>Hail, wind, or tree damage? We inspect, document, and provide detailed estimates for your insurance claim. Free inspection on every visit.</p></div>
+</div>
+</div></section>
+
+<!-- PROCESS -->
+<section class="process" id="process"><div class="process-bg"></div><div class="container" style="position:relative;z-index:1">
+<div class="gl"></div>
+<div style="margin-top:80px;text-align:center"><p class="sl reveal">How It Works</p><h2 class="st reveal">The Seamless <em>Process</em></h2><p class="sd reveal" style="margin:18px auto 0">From first call to final walkthrough. Four steps. Zero surprises.</p></div>
+<div class="pt">
+<div class="ps reveal rd1"><div class="sm">01</div><h3>Contact</h3><p>Call, text, or submit a request. Tyler responds within the hour. No phone trees. No runaround. You talk to an owner.</p></div>
+<div class="ps reveal rd2"><div class="sm">02</div><h3>Quote</h3><p>We come to your property, measure every run, check the fascia, and give you a line-item quote on the spot. No ballparks. No hidden fees.</p></div>
+<div class="ps reveal rd3"><div class="sm">03</div><h3>Install</h3><p>Tyler, Colten, and Andrew show up with the seamless machine, fabricate your gutters on site to the exact measurements, and install everything in a single visit. Most homes are done in one day.</p></div>
+<div class="ps reveal rd4"><div class="sm">04</div><h3>Inspect</h3><p>We walk the entire job with you before we leave. Every seam, every slope, every downspout. If something isn't right, we fix it before we pack up. You don't pay until you're satisfied.</p></div>
+</div>
+</div></section>
+
+<!-- WHY US -->
+<section class="why" id="about"><div class="container">
+<div class="gl"></div>
+<div class="wg" style="margin-top:80px">
+<div class="ws reveal">
+<div class="wc"><div class="wn">200+</div><div class="wl">Installs completed</div></div>
+<div class="wc"><div class="wn">74+</div><div class="wl">Clients served</div></div>
+<div class="wc"><div class="wn">4</div><div class="wl">Total callbacks</div></div>
+<div class="wc"><div class="wn">100%</div><div class="wl">Owner-operated installs</div></div>
+</div>
+<div class="reveal">
+<p class="sl">Why Us</p>
+<h2 class="st">Not Just <em>Another</em><br>Gutter Company</h2>
+<p class="sd wy-desc">Most gutter companies send whoever is available. We're different.</p>
+<ul class="wy-list">
+<li><span class="wd"></span>The owners are on every single job. The guys who built this company.</li>
+<li><span class="wd"></span>Two seamless gutter machines. We fabricate on site for a perfect fit.</li>
+<li><span class="wd"></span>Near-zero callback rate across 200+ installs.</li>
+<li><span class="wd"></span>Three brothers who left comfortable careers to build something that matters.</li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<!-- TEAM -->
+<section class="team" id="team"><div class="team-bg"></div><div class="container" style="position:relative;z-index:1">
+<div style="text-align:center"><p class="sl reveal">The Brothers</p><h2 class="st reveal">Built by <em>Family</em></h2><p class="sd reveal" style="margin:18px auto 0">Three brothers. One mission. Every job is personal because our name is on it.</p></div>
+<div class="tg">
+<div class="tc reveal rd1"><div class="tp">Photo Coming</div><div class="ti"><div class="tn">Tyler List</div><div class="tr">Co-Owner / Operations</div></div></div>
+<div class="tc reveal rd2"><div class="tp">Photo Coming</div><div class="ti"><div class="tn">Colten List</div><div class="tr">Co-Owner / Field Lead</div></div></div>
+<div class="tc reveal rd3"><div class="tp">Photo Coming</div><div class="ti"><div class="tn">Andrew List</div><div class="tr">Co-Owner / Field Lead</div></div></div>
+</div>
+</div></section>
+
+<!-- TESTIMONIALS -->
+<section class="test"><div class="container">
+<div class="gl"></div>
+<div style="margin-top:80px;text-align:center"><p class="sl reveal">What They Say</p><h2 class="st reveal">Client <em>Stories</em></h2><p class="sd reveal" style="margin:18px auto 0">Real feedback from real homeowners and builders across the Midlands.</p></div>
+<div class="testg">
+<div class="testc reveal rd1"><div class="tq">&ldquo;</div><p class="tt">Placeholder for first testimonial. Replace with real client feedback once GMB reviews come in.</p><div class="ta">Client Name</div><div class="tloc">Columbia, SC</div></div>
+<div class="testc reveal rd2"><div class="tq">&ldquo;</div><p class="tt">Placeholder for second testimonial. Video testimonials will be embedded here.</p><div class="ta">Client Name</div><div class="tloc">Lexington, SC</div></div>
+<div class="testc reveal rd3"><div class="tq">&ldquo;</div><p class="tt">Placeholder for third testimonial. Builder testimonials add B2B credibility.</p><div class="ta">Client Name</div><div class="tloc">Batesburg-Leesville, SC</div></div>
+</div>
+</div></section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area"><div class="container">
+<div class="gl"></div>
+<div style="margin-top:80px"><p class="sl reveal">Service Area</p><h2 class="st reveal">Across the <em>Midlands</em></h2><p class="sd reveal" style="margin:18px auto 0">202 jobs completed across the greater Columbia metro and surrounding counties.</p></div>
+<div class="area-map reveal" id="mapContainer" style="max-width:800px;margin:48px auto 0;position:relative;overflow:hidden;border-radius:16px;border:1px solid rgba(243,239,232,0.08);cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none">
+<canvas id="mapCanvas" width="1800" height="1040" style="width:100%;height:auto;display:block;background:#111116"></canvas>
+<div id="mapTooltip" style="position:absolute;display:none;background:rgba(17,17,22,0.95);border:1px solid rgba(200,149,57,0.3);border-radius:8px;padding:8px 12px;color:#F3EFE8;font-family:DM Sans,sans-serif;font-size:12px;pointer-events:none;z-index:10;white-space:nowrap;backdrop-filter:blur(8px)"></div>
+<div style="position:absolute;bottom:12px;right:12px;display:flex;gap:6px;z-index:5">
+<button onclick="mapZoom(1.3)" style="width:32px;height:32px;border-radius:8px;border:1px solid rgba(243,239,232,0.1);background:rgba(17,17,22,0.8);color:#C89539;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px)">+</button>
+<button onclick="mapZoom(0.77)" style="width:32px;height:32px;border-radius:8px;border:1px solid rgba(243,239,232,0.1);background:rgba(17,17,22,0.8);color:#C89539;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px)">&minus;</button>
+<button onclick="mapReset()" style="height:32px;border-radius:8px;border:1px solid rgba(243,239,232,0.1);background:rgba(17,17,22,0.8);color:rgba(243,239,232,0.5);font-size:10px;cursor:pointer;padding:0 10px;font-family:DM Sans,sans-serif;letter-spacing:1px;text-transform:uppercase;backdrop-filter:blur(8px)">Reset</button>
+</div>
+<div style="position:absolute;top:12px;left:12px;color:rgba(243,239,232,0.25);font-size:10px;letter-spacing:1px;text-transform:uppercase;font-family:DM Sans,sans-serif;pointer-events:none">Scroll to zoom &middot; Drag to pan</div>
+</div>
+<p class="area-cities reveal">Columbia &middot; Lexington &middot; Batesburg-Leesville &middot; Irmo &middot; Chapin &middot; West Columbia &middot; Cayce &middot; Blythewood &middot; Elgin &middot; Lugoff &middot; Swansea &middot; Saluda</p>
+<div class="area-badge reveal">Owner-Operated &middot; Midlands Born</div>
+</div></section>
+
+<!-- CTA / CONTACT -->
+<section class="cta" id="contact"><div class="cta-glow"></div><div class="container">
+<h2 class="reveal">Ready for <em>Seamless?</em></h2>
+<p class="reveal">Get a free quote in under 24 hours. No pressure. No gimmicks. Just honest work from a crew that shows up.</p>
+<form class="cf reveal" action="#" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="email" name="email" placeholder="Email Address" class="full">
+<input type="text" name="address" placeholder="Property Address" class="full">
+<select name="service" class="full"><option value="" disabled selected>What do you need?</option><option>New Gutter Installation</option><option>Gutter Replacement</option><option>Gutter Guards</option><option>Gutter Repair</option><option>Gutter Cleaning</option><option>Storm Damage / Insurance</option><option>Other</option></select>
+<select name="heard" class="full"><option value="" disabled selected>How did you hear about us?</option><option>Google</option><option>Facebook</option><option>Referral</option><option>Saw Us Working</option><option>Other</option></select>
+<textarea name="message" placeholder="Tell us about your project (optional)" class="full"></textarea>
+<div class="full"><button type="submit" class="btn-p" style="width:100%;justify-content:center;border:none">Submit Request <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+</form>
+</div></section>
+
+<!-- FOOTER -->
+<footer><div class="container">
+<div class="fg">
+<div><div class="fb" style="display:flex;align-items:center"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px;vertical-align:middle"><g transform="rotate(90 16 16)"><path d="M6 8l8 8-8 8" stroke="#C89539" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8l8 8-8 8" stroke="#C89539" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/></g></svg>THE SEAMLESS <span>BROTHERS</span></div><p class="ft">Elevated Gutter Solutions<br>Batesburg-Leesville, SC</p><a href="tel:8034806654" style="color:var(--gold);text-decoration:none;font-size:15px;font-weight:600">(803) 480-6654</a></div>
+<div class="fc"><h4>Services</h4><a href="#services">Gutter Installation</a><a href="#services">Gutter Guards</a><a href="#services">Gutter Repair</a><a href="#services">Gutter Cleaning</a><a href="#services">Storm Damage</a></div>
+<div class="fc"><h4>Company</h4><a href="#about">About Us</a><a href="#team">The Brothers</a><a href="#process">Our Process</a><a href="#area">Service Area</a></div>
+<div class="fc"><h4>Connect</h4><a href="tel:8034806654">(803) 480-6654</a><a href="mailto:tylerlist@thegutterbrothers.co">Email Us</a><a href="#">Facebook</a><a href="#">Google Reviews</a></div>
+</div>
+<div class="fbot"><div class="fcopy">&copy; 2026 The Seamless Brothers LLC. All rights reserved.</div>
+<div class="fsoc"><a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a></div>
+</div>
+</div></footer>
+
+<script>
+const nb=document.getElementById('navbar');window.addEventListener('scroll',()=>{nb.classList.toggle('scrolled',window.scrollY>60)});
+const tg=document.getElementById('navToggle'),nl=document.getElementById('navLinks');tg.addEventListener('click',()=>{tg.classList.toggle('active');nl.classList.toggle('open')});nl.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{tg.classList.remove('active');nl.classList.remove('open')})});
+const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{document.querySelectorAll('.wc').forEach((c,i)=>{const s=.02+(i*.008),r=c.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0)c.style.transform=`translateY(${(r.top-window.innerHeight/2)*s}px)`})});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+</script>
+
+<script>
+(function(){
+const canvas = document.getElementById('mapCanvas');
+const ctx = canvas.getContext('2d');
+const container = document.getElementById('mapContainer');
+const tooltip = document.getElementById('mapTooltip');
+const W = 1800, H = 1040;
+const dpr = window.devicePixelRatio || 1;
+
+// SC GeoJSON boundary [lng,lat]
+const scBorder = [[-82.764143,35.066903],[-82.550543,35.160011],[-82.276696,35.198349],[-81.044384,35.149057],[-81.038907,35.044995],[-80.934845,35.105241],[-80.781491,34.935456],[-80.797922,34.820441],[-79.675149,34.80401],[-78.541422,33.851022],[-78.716684,33.80173],[-78.935762,33.637421],[-79.149363,33.380005],[-79.187701,33.171881],[-79.357487,33.007573],[-79.582041,33.007573],[-79.631334,32.887081],[-79.866842,32.755634],[-79.998289,32.613234],[-80.206412,32.552987],[-80.430967,32.399633],[-80.452875,32.328433],[-80.660998,32.246279],[-80.885553,32.032678],[-81.115584,32.120309],[-81.121061,32.290094],[-81.279893,32.558464],[-81.416816,32.629664],[-81.42777,32.843265],[-81.493493,33.007573],[-81.761863,33.160928],[-81.937125,33.347144],[-81.926172,33.462159],[-82.194542,33.631944],[-82.325988,33.81816],[-82.55602,33.94413],[-82.714851,34.152254],[-82.747713,34.26727],[-82.901067,34.486347],[-83.005129,34.469916],[-83.339222,34.683517],[-83.322791,34.787579],[-83.109191,35.000659],[-82.764143,35.066903]];
+
+const minLat=31.83,maxLat=35.4,minLng=-83.55,maxLng=-78.34;
+const M=50;
+
+function geoToCanvas(lat,lng){
+  const x=M+(lng-minLng)/(maxLng-minLng)*(W-2*M);
+  const y=M+(1-(lat-minLat)/(maxLat-minLat))*(H-2*M);
+  return [x,y];
+}
+
+// Job data [lat,lng,name]
+const jobs=[
+[34.221,-80.978,"Blythewood"],[34.218,-80.984,"Blythewood"],[34.205,-80.960,"Blythewood"],[34.223,-80.992,"Blythewood"],[34.229,-80.955,"Blythewood"],[34.212,-80.970,"Blythewood"],[34.207,-80.965,"Blythewood"],[34.215,-80.981,"Blythewood"],[34.214,-80.973,"Blythewood"],[34.210,-80.968,"Blythewood"],[34.217,-80.987,"Blythewood"],[34.206,-80.975,"Blythewood"],[34.219,-80.962,"Blythewood"],[34.208,-80.969,"Blythewood"],[34.225,-80.958,"Blythewood"],[34.2145,-80.9815,"Blythewood"],[34.216,-80.976,"Blythewood"],
+[34.053,-81.020,"Columbia"],[34.058,-81.145,"Columbia"],[34.042,-81.115,"Columbia"],[34.018,-80.995,"Columbia"],[34.020,-80.990,"Columbia"],[34.025,-80.985,"Columbia"],[33.985,-81.040,"Columbia"],[34.090,-80.950,"Columbia"],[33.998,-81.010,"Columbia"],[34.055,-81.150,"Columbia"],[34.060,-81.138,"Columbia"],[34.015,-81.005,"Columbia"],[33.960,-80.980,"Columbia"],[34.062,-81.142,"Columbia"],[33.995,-81.005,"Columbia"],[34.064,-81.135,"Columbia"],[34.070,-81.155,"Columbia"],[34.017,-80.992,"Columbia"],[34.110,-80.920,"Columbia"],[34.105,-80.925,"Columbia"],[34.061,-81.139,"Columbia"],[34.066,-81.148,"Columbia"],
+[33.915,-81.530,"Batesburg-Leesville"],[33.912,-81.538,"Batesburg-Leesville"],[33.910,-81.535,"Batesburg-Leesville"],[33.905,-81.520,"Batesburg-Leesville"],[33.913,-81.540,"Batesburg-Leesville"],[33.911,-81.536,"Batesburg-Leesville"],[33.895,-81.550,"Batesburg-Leesville"],[33.920,-81.525,"Batesburg-Leesville"],[33.914,-81.542,"Batesburg-Leesville"],[33.918,-81.528,"Batesburg-Leesville"],[33.908,-81.532,"Batesburg-Leesville"],[33.906,-81.545,"Batesburg-Leesville"],[33.909,-81.537,"Batesburg-Leesville"],[33.917,-81.523,"Batesburg-Leesville"],[33.916,-81.534,"Batesburg-Leesville"],[33.907,-81.541,"Batesburg-Leesville"],[33.903,-81.548,"Batesburg-Leesville"],[33.898,-81.552,"Batesburg-Leesville"],[33.904,-81.526,"Batesburg-Leesville"],[33.901,-81.544,"Batesburg-Leesville"],
+[33.981,-81.240,"Lexington"],[33.980,-81.235,"Lexington"],[33.983,-81.230,"Lexington"],[33.982,-81.232,"Lexington"],[33.979,-81.238,"Lexington"],[33.975,-81.245,"Lexington"],[33.973,-81.250,"Lexington"],[33.970,-81.255,"Lexington"],[33.984,-81.228,"Lexington"],[33.985,-81.225,"Lexington"],[33.977,-81.242,"Lexington"],[33.986,-81.227,"Lexington"],[33.978,-81.234,"Lexington"],[33.987,-81.236,"Lexington"],[33.988,-81.231,"Lexington"],[33.972,-81.252,"Lexington"],[33.971,-81.248,"Lexington"],
+[34.168,-81.350,"Chapin"],[34.175,-81.365,"Chapin"],[34.170,-81.358,"Chapin"],[34.166,-81.352,"Chapin"],[34.172,-81.342,"Chapin"],[34.174,-81.355,"Chapin"],[34.169,-81.348,"Chapin"],[34.163,-81.360,"Chapin"],[34.171,-81.345,"Chapin"],[34.167,-81.353,"Chapin"],[34.1695,-81.349,"Chapin"],[34.165,-81.362,"Chapin"],
+[34.210,-81.535,"Prosperity"],[34.205,-81.528,"Prosperity"],[34.207,-81.531,"Prosperity"],[34.212,-81.538,"Prosperity"],[34.209,-81.533,"Prosperity"],[34.204,-81.526,"Prosperity"],[34.208,-81.530,"Prosperity"],[34.206,-81.529,"Prosperity"],[34.211,-81.536,"Prosperity"],[34.213,-81.540,"Prosperity"],
+[34.088,-81.185,"Irmo"],[34.090,-81.190,"Irmo"],[34.087,-81.183,"Irmo"],[34.085,-81.180,"Irmo"],[34.092,-81.195,"Irmo"],[34.086,-81.182,"Irmo"],
+[33.560,-81.720,"Aiken"],[33.555,-81.725,"Aiken"],[33.554,-81.724,"Aiken"],[33.562,-81.715,"Aiken"],[33.558,-81.718,"Aiken"],[33.556,-81.722,"Aiken"],[33.553,-81.726,"Aiken"],[33.561,-81.713,"Aiken"],
+[33.923,-81.393,"Gilbert"],[33.925,-81.390,"Gilbert"],[33.921,-81.396,"Gilbert"],[33.927,-81.388,"Gilbert"],[33.924,-81.394,"Gilbert"],
+[34.247,-80.607,"Camden"],[34.249,-80.610,"Camden"],[34.251,-80.603,"Camden"],[34.245,-80.605,"Camden"],[34.253,-80.612,"Camden"],
+[34.168,-80.786,"Elgin"],[34.170,-80.790,"Elgin"],[34.172,-80.788,"Elgin"],[34.166,-80.784,"Elgin"],[34.169,-80.787,"Elgin"],
+[33.492,-80.856,"Orangeburg"],[33.493,-80.854,"Orangeburg"],[33.4925,-80.855,"Orangeburg"],[33.494,-80.858,"Orangeburg"],[33.4945,-80.8575,"Orangeburg"],
+[34.002,-81.772,"Saluda"],[34.005,-81.768,"Saluda"],[34.000,-81.775,"Saluda"],[34.004,-81.770,"Saluda"],[34.003,-81.774,"Saluda"],
+[33.995,-81.075,"West Columbia"],[33.993,-81.078,"West Columbia"],[33.997,-81.072,"West Columbia"],[33.994,-81.076,"West Columbia"],
+[33.918,-81.513,"Leesville"],[33.920,-81.510,"Leesville"],[33.916,-81.516,"Leesville"],[33.922,-81.508,"Leesville"],
+[34.227,-80.687,"Lugoff"],[34.228,-80.686,"Lugoff"],[34.226,-80.688,"Lugoff"],
+[33.740,-81.099,"Swansea"],[33.738,-81.097,"Swansea"],
+[33.841,-81.608,"Monetta"],[33.843,-81.605,"Monetta"],
+[33.657,-81.365,"Wagener"],[33.655,-81.363,"Wagener"],
+[33.290,-82.121,"Hephzibah, GA"],[33.288,-82.123,"Hephzibah, GA"],
+[33.930,-81.505,"Lexington Co."],[33.935,-81.500,"Lexington Co."],[33.940,-81.495,"Lexington Co."],[33.928,-81.508,"Lexington Co."],[33.932,-81.503,"Lexington Co."],[33.926,-81.510,"Lexington Co."],[33.934,-81.497,"Lexington Co."],[33.929,-81.506,"Lexington Co."],[33.931,-81.502,"Lexington Co."],[33.933,-81.499,"Lexington Co."],[33.936,-81.496,"Lexington Co."],[33.937,-81.494,"Lexington Co."],
+[33.950,-81.560,"Saluda Co."],[33.951,-81.561,"Saluda Co."],[33.952,-81.562,"Saluda Co."],[33.953,-81.563,"Saluda Co."],
+[33.464,-81.888,"Beech Island"],[33.534,-82.131,"Evans, GA"],[32.884,-82.457,"Bartow, GA"],
+[33.470,-81.510,"Windsor"],[33.472,-81.505,"Windsor"],[33.468,-81.515,"Windsor"],
+[33.245,-81.359,"Barnwell"],[33.407,-81.420,"Williston"],[33.756,-82.271,"Plum Branch"],
+[33.833,-81.801,"Johnston"],[33.832,-81.800,"Johnston"],
+[33.082,-81.195,"Ulmer"],[35.072,-81.650,"Gaffney"],[34.738,-82.255,"Woodruff"],
+[34.523,-82.494,"Belton"],[34.737,-82.254,"Simpsonville"],[34.445,-82.390,"Honea Path"],
+[34.307,-82.664,"Iva"],[34.721,-80.771,"Lancaster"],[34.925,-81.025,"Rock Hill"],
+[34.007,-80.433,"Dalzell"],[33.921,-80.342,"Sumter"],[33.297,-81.034,"Bamberg"],
+[33.904,-80.874,"Hopkins"],[33.876,-80.705,"Eastover"],[34.363,-81.415,"Little Mountain"],
+[34.312,-81.266,"Jenkinsville"],[34.381,-81.087,"Winnsboro"],[34.196,-82.162,"Greenwood"],
+[34.560,-82.620,"Anderson Co."]
+];
+
+// Camera
+let camX=872, camY=419, zoom=1.6;
+const defX=872, defY=419, defZ=1.6;
+let isDragging=false, dragMoved=false, lastMX=0, lastMY=0;
+let animFrame=null, pulsePhase=0;
+let resetTimer=null;
+
+function scheduleReset(){
+  clearTimeout(resetTimer);
+  resetTimer=setTimeout(()=>{
+    animateToDefault();
+  }, 6000);
+}
+
+function animateToDefault(){
+  const startX=camX,startY=camY,startZ=zoom;
+  const dur=1200;
+  const t0=performance.now();
+  function step(t){
+    const p=Math.min((t-t0)/dur,1);
+    const e=1-(1-p)*(1-p)*(1-p); // easeOutCubic
+    camX=startX+(defX-startX)*e;
+    camY=startY+(defY-startY)*e;
+    zoom=startZ+(defZ-startZ)*e;
+    draw();
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function screenToCanvas(sx,sy){
+  const rect=canvas.getBoundingClientRect();
+  const scaleX=W/rect.width, scaleY=H/rect.height;
+  return [(sx-rect.left)*scaleX, (sy-rect.top)*scaleY];
+}
+
+function worldToScreen(wx,wy){
+  return [(wx-camX)*zoom+W/2, (wy-camY)*zoom+H/2];
+}
+
+function screenToWorld(sx,sy){
+  return [(sx-W/2)/zoom+camX, (sy-H/2)/zoom+camY];
+}
+
+window.mapZoom=function(factor){ factor=1+(factor-1)*0.6;
+  zoom=Math.max(0.7,Math.min(zoom*factor,5));
+  draw();
+  scheduleReset();
+};
+
+window.mapReset=function(){
+  clearTimeout(resetTimer);
+  animateToDefault();
+};
+
+// Mouse events
+container.addEventListener('mousedown',e=>{
+  isDragging=true;dragMoved=false;
+  lastMX=e.clientX;lastMY=e.clientY;
+  container.style.cursor='grabbing';
+  clearTimeout(resetTimer);
+});
+window.addEventListener('mousemove',e=>{
+  if(isDragging){
+    const rect=canvas.getBoundingClientRect();
+    const sx=W/rect.width, sy=H/rect.height;
+    camX-=(e.clientX-lastMX)*sx*0.4/zoom;
+    camY-=(e.clientY-lastMY)*sy*0.4/zoom;
+    lastMX=e.clientX;lastMY=e.clientY;
+    draw();
+  } else {
+    // Tooltip
+    const [cx,cy]=screenToCanvas(e.clientX,e.clientY);
+    const [wx,wy]=screenToWorld(cx,cy);
+    let found=null;
+    const hitR=8/zoom;
+    for(const j of jobs){
+      const [jx,jy]=geoToCanvas(j[0],j[1]);
+      if(Math.abs(wx-jx)<hitR*3&&Math.abs(wy-jy)<hitR*3){
+        const [sx2,sy2]=worldToScreen(jx,jy);
+        found={name:j[2],sx:e.clientX,sy:e.clientY};
+        break;
+      }
+    }
+    if(found){
+      tooltip.style.display='block';
+      const rect=container.getBoundingClientRect();
+      tooltip.style.left=(found.sx-rect.left+12)+'px';
+      tooltip.style.top=(found.sy-rect.top-30)+'px';
+      tooltip.innerHTML='<span style="color:#C89539;font-weight:600">'+found.name+'</span>';
+    } else {
+      tooltip.style.display='none';
+    }
+  }
+});
+window.addEventListener('mouseup',()=>{
+  if(isDragging){isDragging=false;container.style.cursor='grab';scheduleReset();}
+});
+
+// Wheel zoom
+container.addEventListener('wheel',e=>{
+  e.preventDefault();
+  const factor=e.deltaY<0?1.04:0.96;
+  // Zoom toward mouse position
+  const [cx,cy]=screenToCanvas(e.clientX,e.clientY);
+  const [wx,wy]=screenToWorld(cx,cy);
+  zoom=Math.max(0.7,Math.min(zoom*factor,5));
+  // Adjust cam to keep mouse point stable
+  camX=wx-(cx-W/2)/zoom;
+  camY=wy-(cy-H/2)/zoom;
+  draw();
+  scheduleReset();
+},{passive:false});
+
+// Touch events
+let lastTouchDist=0,lastTouchX=0,lastTouchY=0;
+container.addEventListener('touchstart',e=>{
+  clearTimeout(resetTimer);
+  if(e.touches.length===1){
+    isDragging=true;
+    lastTouchX=e.touches[0].clientX;lastTouchY=e.touches[0].clientY;
+  } else if(e.touches.length===2){
+    isDragging=false;
+    lastTouchDist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+  }
+},{passive:true});
+container.addEventListener('touchmove',e=>{
+  e.preventDefault();
+  if(e.touches.length===1&&isDragging){
+    const rect=canvas.getBoundingClientRect();
+    const sx=W/rect.width,sy=H/rect.height;
+    camX-=(e.touches[0].clientX-lastTouchX)*sx*0.4/zoom;
+    camY-=(e.touches[0].clientY-lastTouchY)*sy*0.4/zoom;
+    lastTouchX=e.touches[0].clientX;lastTouchY=e.touches[0].clientY;
+    draw();
+  } else if(e.touches.length===2){
+    const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+    if(lastTouchDist>0){
+      const pinchFactor=1+(d/lastTouchDist-1)*0.35;
+      zoom=Math.max(0.5,Math.min(zoom*pinchFactor,5));
+      draw();
+    }
+    lastTouchDist=d;
+  }
+},{passive:false});
+container.addEventListener('touchend',e=>{
+  isDragging=false;lastTouchDist=0;scheduleReset();
+},{passive:true});
+
+// Highways
+const highways={
+  "I-20":[[33.56,-82.20],[33.65,-81.95],[33.80,-81.65],[33.92,-81.40],[33.98,-81.15],[34.00,-81.03],[34.05,-80.85],[34.10,-80.65],[34.15,-80.45],[34.18,-80.30]],
+  "I-26":[[34.85,-82.40],[34.60,-82.20],[34.40,-81.90],[34.20,-81.55],[34.10,-81.35],[34.00,-81.10],[33.90,-80.95],[33.75,-80.70],[33.55,-80.45],[33.35,-79.95],[33.00,-80.05],[32.80,-79.95]],
+  "I-77":[[34.95,-80.98],[34.75,-80.95],[34.55,-80.96],[34.35,-80.97],[34.20,-80.98],[34.05,-81.00],[33.95,-81.03]],
+  "I-95":[[34.30,-79.40],[34.10,-79.55],[33.90,-79.75],[33.70,-79.95],[33.50,-80.15],[33.30,-80.35],[33.10,-80.55],[32.90,-80.65],[32.60,-80.75],[32.35,-80.85]]
+};
+
+// Lake Murray
+const lakeMurray=[[34.05,-81.20],[34.08,-81.25],[34.10,-81.30],[34.12,-81.35],[34.15,-81.40],[34.17,-81.42],[34.18,-81.38],[34.16,-81.32],[34.14,-81.28],[34.13,-81.25],[34.11,-81.22],[34.08,-81.20]];
+
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle='#111116';
+  ctx.fillRect(0,0,W,H);
+
+  ctx.save();
+  ctx.translate(W/2,H/2);
+  ctx.scale(zoom,zoom);
+  ctx.translate(-camX,-camY);
+
+  // State fill
+  ctx.beginPath();
+  scBorder.forEach(([lng,lat],i)=>{
+    const [x,y]=geoToCanvas(lat,lng);
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  });
+  ctx.closePath();
+  ctx.fillStyle='rgba(200,149,57,0.015)';
+  ctx.fill();
+  ctx.strokeStyle='rgba(243,239,232,0.12)';
+  ctx.lineWidth=1.5;
+  ctx.lineJoin='round';
+  ctx.stroke();
+
+  // Grid inside state (clip)
+  ctx.save();
+  ctx.beginPath();
+  scBorder.forEach(([lng,lat],i)=>{
+    const [x,y]=geoToCanvas(lat,lng);
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  });
+  ctx.closePath();
+  ctx.clip();
+  ctx.strokeStyle='rgba(243,239,232,0.02)';
+  ctx.lineWidth=0.5;
+  for(let i=0;i<W;i+=50){ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,H);ctx.stroke();}
+  for(let j=0;j<H;j+=50){ctx.beginPath();ctx.moveTo(0,j);ctx.lineTo(W,j);ctx.stroke();}
+  ctx.restore();
+
+  // Highways
+  ctx.setLineDash([6,5]);
+  ctx.strokeStyle='rgba(243,239,232,0.05)';
+  ctx.lineWidth=0.8;
+  for(const [name,pts] of Object.entries(highways)){
+    ctx.beginPath();
+    pts.forEach(([lat,lng],i)=>{
+      const [x,y]=geoToCanvas(lat,lng);
+      i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+    // Label
+    const mid=pts[Math.floor(pts.length/2)];
+    const [mx,my]=geoToCanvas(mid[0],mid[1]);
+    ctx.fillStyle='rgba(243,239,232,0.1)';
+    ctx.font='500 9px DM Sans,sans-serif';
+    ctx.fillText(name,mx+6,my-4);
+  }
+  ctx.setLineDash([]);
+
+  // Lake Murray
+  ctx.beginPath();
+  lakeMurray.forEach(([lat,lng],i)=>{
+    const [x,y]=geoToCanvas(lat,lng);
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  });
+  ctx.closePath();
+  ctx.fillStyle='rgba(100,150,200,0.04)';
+  ctx.fill();
+
+  // Neighbor labels
+  ctx.fillStyle='rgba(243,239,232,0.06)';
+  ctx.font='bold 13px DM Sans,sans-serif';
+  ctx.textAlign='center';
+  let [gx,gy]=geoToCanvas(33.30,-82.40);
+  ctx.fillText('GEORGIA',gx,gy);
+  [gx,gy]=geoToCanvas(35.15,-80.50);
+  ctx.fillText('NORTH CAROLINA',gx,gy);
+
+  // Glow circles
+  const glows=[[34.00,-81.03,22],[33.98,-81.24,17],[34.21,-80.97,16],[33.91,-81.54,15],[34.17,-81.35,11],[34.21,-81.53,9],[33.56,-81.72,8],[34.09,-81.18,6],[33.92,-81.39,5]];
+  for(const [lat,lng,count] of glows){
+    const [x,y]=geoToCanvas(lat,lng);
+    const r=12+count*1.0;
+    const grad=ctx.createRadialGradient(x,y,0,x,y,r);
+    grad.addColorStop(0,'rgba(200,149,57,0.06)');
+    grad.addColorStop(1,'rgba(200,149,57,0)');
+    ctx.fillStyle=grad;
+    ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();
+  }
+
+  // Job pins
+  const pinR=2.2;
+  for(let i=0;i<jobs.length;i++){
+    const [lat,lng]=jobs[i];
+    const [x,y]=geoToCanvas(lat,lng);
+    const pulse=0.85;
+    ctx.globalAlpha=pulse;
+    ctx.fillStyle='#C89539';
+    ctx.beginPath();ctx.arc(x,y,pinR,0,Math.PI*2);ctx.fill();
+  }
+  ctx.globalAlpha=1;
+
+  // HQ ring
+  const [hx,hy]=geoToCanvas(33.912,-81.538);
+  ctx.strokeStyle='#C89539';
+  ctx.lineWidth=1.5;
+  ctx.globalAlpha=0.6;
+  ctx.beginPath();ctx.arc(hx,hy,5,0,Math.PI*2);ctx.stroke();
+  const pulseR=8+6*Math.sin(pulsePhase*0.5);
+  ctx.globalAlpha=0.3*(1-Math.sin(pulsePhase*0.5)*0.5);
+  ctx.lineWidth=0.5;
+  ctx.beginPath();ctx.arc(hx,hy,pulseR,0,Math.PI*2);ctx.stroke();
+  ctx.globalAlpha=1;
+
+  // City labels
+  const labels=[
+    ["COLUMBIA",34.00,-81.03,14,"700","#C89539"],
+    ["LEXINGTON",33.98,-81.24,12,"600","#C89539"],
+    ["BLYTHEWOOD",34.21,-80.97,12,"600","#C89539"],
+    ["CHAPIN",34.17,-81.35,10,"500","rgba(243,239,232,0.5)"],
+    ["PROSPERITY",34.21,-81.53,10,"500","rgba(243,239,232,0.45)"],
+    ["AIKEN",33.56,-81.72,10,"500","rgba(243,239,232,0.45)"],
+    ["IRMO",34.09,-81.18,10,"500","rgba(243,239,232,0.45)"],
+    ["ELGIN",34.17,-80.79,10,"500","rgba(243,239,232,0.45)"],
+    ["CAMDEN",34.25,-80.61,10,"500","rgba(243,239,232,0.45)"],
+    ["ORANGEBURG",33.49,-80.86,10,"500","rgba(243,239,232,0.4)"],
+    ["GILBERT",33.92,-81.39,10,"500","rgba(243,239,232,0.4)"],
+    ["HQ",33.912,-81.538,10,"700","#C89539"],
+  ];
+  ctx.textAlign='center';
+  for(const [txt,lat,lng,fs,fw,fill] of labels){
+    const [x,y]=geoToCanvas(lat,lng);
+    const s=fs;
+    ctx.font=fw+' '+s+'px DM Sans,sans-serif';
+    ctx.fillStyle=fill;
+    ctx.fillText(txt,txt==="HQ"?x+16:x,y-14);
+  }
+
+  // Bottom badge
+  ctx.restore();
+  ctx.fillStyle='rgba(243,239,232,0.3)';
+  ctx.font='500 10px DM Sans,sans-serif';
+  ctx.textAlign='center';
+  ctx.letterSpacing='4px';
+  ctx.fillText('202 JOBS COMPLETED  |  SOUTH CAROLINA & GEORGIA',W/2,H-20);
+
+  pulsePhase+=0.03;
+  animFrame=requestAnimationFrame(draw);
+}
+
+draw();
+})();
+</script>
+</body>
+</html>
