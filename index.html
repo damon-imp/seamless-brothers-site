@@ -29,6 +29,8 @@
 
 /* CTA */.cta{padding:160px 0;text-align:center;position:relative;overflow:hidden}.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(200,149,57,.06),transparent 60%);pointer-events:none}.cta h2{font-family:var(--serif);font-size:clamp(36px,5vw,60px);font-weight:600;margin-bottom:18px;position:relative;z-index:1}.cta h2 em{font-style:italic;color:var(--gold)}.cta>div>p{font-size:16px;color:var(--white-70);max-width:460px;margin:0 auto 48px;line-height:1.7;position:relative;z-index:1}.cf{max-width:560px;margin:48px auto 0;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:16px}.cf .full{grid-column:1/-1}.cf input,.cf textarea,.cf select{width:100%;padding:16px 20px;background:var(--black-card);border:1px solid var(--white-08);border-radius:var(--rs);color:var(--white);font-family:var(--font);font-size:14px;transition:border-color .3s;outline:none}.cf input::placeholder,.cf textarea::placeholder{color:var(--white-40)}.cf input:focus,.cf textarea:focus,.cf select:focus{border-color:rgba(200,149,57,.4)}.cf textarea{resize:vertical;min-height:120px}.cf select{cursor:pointer;-webkit-appearance:none}.cf select option{background:var(--black-card);color:var(--white)}
 
+/* GOOGLE PLACES AUTOCOMPLETE */.pac-container{background:var(--black-card);border:1px solid var(--white-08);border-radius:var(--rs);box-shadow:0 16px 48px rgba(0,0,0,.5);font-family:var(--font);margin-top:6px;overflow:hidden}.pac-container:after{display:none}.pac-item{padding:12px 16px;color:var(--white-70);border-top:1px solid var(--white-08);cursor:pointer;font-size:13px;line-height:1.4}.pac-item:first-child{border-top:none}.pac-item:hover,.pac-item-selected{background:var(--black-surface);color:var(--white)}.pac-item-query{color:var(--white);font-size:14px;padding-right:4px}.pac-matched{color:var(--gold);font-weight:600}.pac-icon{filter:invert(1) opacity(.35);margin-right:10px}
+
 /* FOOTER */footer{padding:56px 0 40px;border-top:1px solid var(--white-08)}.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}.fb{font-size:18px;font-weight:700;margin-bottom:12px}.fb span{color:var(--gold)}.ft{font-size:13px;color:var(--white-40);margin-bottom:16px}.fc h4{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:600}.fc a{display:block;color:var(--white-50);font-size:14px;text-decoration:none;margin-bottom:10px;transition:color .3s}.fc a:hover{color:var(--white)}.fbot{margin-top:48px;padding-top:24px;border-top:1px solid var(--white-08);display:flex;justify-content:space-between;align-items:center}.fcopy{font-size:12px;color:var(--white-40)}.fsoc{display:flex;gap:16px}.fsoc a{color:var(--white-40);transition:color .3s}.fsoc a:hover{color:var(--gold)}
 
 /* ANIM */@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-8px)}}@keyframes pinPulse{0%,100%{opacity:.7}50%{opacity:1}}.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.35s}
@@ -200,6 +202,39 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click'
   if(!form)return;
   const btn=document.getElementById('quoteSubmitBtn');
   const status=document.getElementById('quoteFormStatus');
+  const addrInput=form.querySelector('input[name="address"]');
+  let parsedAddress=null;
+  window.initQuoteAutocomplete=function(){
+    if(!window.google||!google.maps||!google.maps.places||!addrInput)return;
+    const ac=new google.maps.places.Autocomplete(addrInput,{
+      componentRestrictions:{country:'us'},
+      fields:['address_components','formatted_address'],
+      types:['address']
+    });
+    ac.setBounds(new google.maps.LatLngBounds({lat:32.0,lng:-83.4},{lat:35.2,lng:-78.5}));
+    ac.addListener('place_changed',()=>{
+      const p=ac.getPlace();
+      if(!p||!p.address_components){parsedAddress=null;return;}
+      const g=(t,s)=>{const c=p.address_components.find(x=>x.types.includes(t));return c?(s?c.short_name:c.long_name):'';};
+      parsedAddress={
+        address1:(g('street_number')+' '+g('route')).trim(),
+        city:g('locality')||g('sublocality')||g('administrative_area_level_3'),
+        state:g('administrative_area_level_1',true),
+        postalCode:g('postal_code'),
+        country:g('country',true),
+        formatted:p.formatted_address||''
+      };
+    });
+    addrInput.addEventListener('input',()=>{
+      if(parsedAddress&&addrInput.value!==parsedAddress.formatted)parsedAddress=null;
+    });
+    addrInput.addEventListener('keydown',e=>{
+      if(e.key==='Enter'){
+        const d=document.querySelector('.pac-container');
+        if(d&&getComputedStyle(d).display!=='none'&&d.children.length>0)e.preventDefault();
+      }
+    });
+  };
   const setStatus=(msg,kind)=>{
     status.style.display='block';
     status.textContent=msg;
@@ -224,11 +259,18 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click'
     const fd=new FormData(form);
     const name=(fd.get('name')||'').toString().trim();
     const {firstName,lastName}=splitName(name);
+    const rawAddr=(fd.get('address')||'').toString().trim();
     const payload={
       name,firstName,lastName,
       email:(fd.get('email')||'').toString().trim(),
       phone:normalizePhone(fd.get('phone')),
-      address1:(fd.get('address')||'').toString().trim(),
+      address1:parsedAddress?parsedAddress.address1:rawAddr,
+      city:parsedAddress?parsedAddress.city:'',
+      state:parsedAddress?parsedAddress.state:'',
+      postalCode:parsedAddress?parsedAddress.postalCode:'',
+      country:parsedAddress?parsedAddress.country:'',
+      fullAddress:parsedAddress?parsedAddress.formatted:rawAddr,
+      addressVerified:!!parsedAddress,
       service:(fd.get('service')||'').toString(),
       heard:(fd.get('heard')||'').toString(),
       message:(fd.get('message')||'').toString().trim(),
@@ -248,7 +290,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click'
       btn.style.display='none';
     }catch(err){
       const subject=encodeURIComponent('Quote Request — '+(name||'Website'));
-      const body=encodeURIComponent('Name: '+name+'\nPhone: '+payload.phone+'\nEmail: '+payload.email+'\nAddress: '+payload.address1+'\nService: '+payload.service+'\nHeard via: '+payload.heard+'\nMessage: '+payload.message);
+      const body=encodeURIComponent('Name: '+name+'\nPhone: '+payload.phone+'\nEmail: '+payload.email+'\nAddress: '+payload.fullAddress+'\nService: '+payload.service+'\nHeard via: '+payload.heard+'\nMessage: '+payload.message);
       setStatus('Submission failed. Email us directly at '+FALLBACK_EMAIL+' or call (803) 480-6654.','err');
       window.location.href='mailto:'+FALLBACK_EMAIL+'?subject='+subject+'&body='+body;
       btn.disabled=false;
@@ -629,5 +671,8 @@ function draw(){
 draw();
 })();
 </script>
+
+<!-- Google Places Autocomplete: paste your Maps JS API key in place of YOUR_GOOGLE_MAPS_API_KEY below. Restrict the key to thegutterbrothers.co in the GCP console. -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL_R8fYRFp6z2G8HA5uKzFRbNJWvw5x3I&libraries=places&callback=initQuoteAutocomplete&loading=async"></script>
 </body>
 </html>
